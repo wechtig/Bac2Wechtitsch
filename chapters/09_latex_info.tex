@@ -1,0 +1,252 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Writing a Thesis Using \LaTeX{} }
+\label{chap:info_REMOVE_ME}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterstart
+
+\chapquote{Research is formalised curiosity. It is poking and prying with a purpose.}
+          {Zora Neale Hurston}
+          
+Each chapter should start with a short explanation what is inside the upcoming chapter and why it has been included (at this position) in your work: This template shall provide some considerations, text examples and formatting hints for your Bachelor's or Master's thesis in \LaTeX{}.
+
+
+\section{Hints on Scientific Writing}
+
+Some recommendations on writing an abstract and about including references to related work. 
+
+\subsection{How to Write an Abstract}
+
+Learn from others and read many papers\footnote{For examples, read the abstract of paper \url{https://arxiv.org/abs/1609.03677}.} related to your work. Finally, you might ensure that your abstract contains:%
+	\begin{itemize}
+		\item English \& German Version (250 – 350 words each)
+		\item Background / motivation / problem statement 
+		\item Methods / procedure / approach
+		\item Results / findings / product
+		\item Conclusion and implications
+	\end{itemize}
+
+It is easier to write the Abstract when the rest of your paper is finished.
+
+\subsection{Research Resources}
+
+
+For literature research\footnote{You might start your search within the scientific databases \url{http://dl.acm.org/} or \url{http://ieeexplore.ieee.org/}. Full-text PDF download is available from within the FH JOANNEUM network.} use e.g. \citetitle{acm:diglibrary} \parencite{acm:diglibrary} or \citetitle{ieee:xplore} \parencite{ieee:xplore}.
+
+\subsection{Citation Styles}
+Harvard citation style is implemented in this template. For information about a topic like RFID paraphrased in your own words~\parencite[cf.][pg 317]{Batina:2011} do not forget to use \emph{cf.} and -- if available the relevant page numbers -- along with parenthetical cite \emph{\\parencite}. Direct quotations would not need the \emph{cf.}. If you need to use the title of a reference, for example the RFID Authentication Protocol by \citetitle{Fernandez-Mir:2011} you might use \verb+\citetitle+. For references without parentheses (find more in \cite{Li:2008}) just use \verb+\cite+ or -- if year should be in parentheses -- \textcite{Batina:2011} \verb+\textcite+.
+
+\begin{spar}
+Note the use of \emph{ibid} (in German \emph{ebd} or \emph{ebenda}) for referencing (several pages of) the same resource subsequently. For example, see \citep[cf.][pg 317]{Batina:2011} and \citep[cf.][pg 321]{Batina:2011} \citep[cf.][pg 399]{Batina:2011}.
+\end{spar}
+
+You might cite URLs, e.g. about (tools for checking) Accessibility~\parencite[cf.][]{Google:2017a,Google:2016a}, as online resources with a date of your last visit.
+
+
+\subsection{Scientific Writing Resources}
+
+% Write intro for items ending with a ":" colon
+
+Selected resources about scientific working: 
+\begin{itemize}
+  \item \emph{\citetitle{Zobel:2004}}: \ldots elements of good writing - clarity, simplicity, accuracy, and organization \ldots by \cite{Zobel:2004}.
+  
+  \item \emph{\citetitle{Yin:2013}}: \ldots offers comprehensive coverage of the design and use of the case study method as a valid research tool \ldots by \cite{Yin:2013}.
+
+  \item \emph{\citetitle{Strunk:2000}}: \ldots first edition about 1935; includes a list of valuable recommendations: be clear, do not overwrite \ldots by \cite{Strunk:2000}.
+
+  \item \emph{\citetitle{Field:2003}}: \ldots Planning an Experiment, Experimental Designs, Descriptive Statistics, Inferential Statistics \ldots Answering the Question 'So What?' \ldots by \cite{Field:2003}.
+
+  \item \emph{\citetitle{Booth:2008}}: \ldots What Is Research? Creating a Relationship with Your Reader: Your Role, Finding a Good Research Problem \ldots by \cite{Booth:2008}.
+
+  \item \emph{\citetitle{Alley:1998}}: \ldots your writing is the principle way in which people learn about your work. When you communicate well, you receive credit for your \ldots by \cite{Alley:1998}.
+
+  \item \emph{\citetitle{Eco:2010}}: \ldots Warum muss man eine wissenschaftliche Abschlussarbeit schreiben und was ist sie? \ldots by \cite{Eco:2010}.
+
+  \item \emph{\citetitle{Wisconsin:2004}}: \ldots you will find many instructional materials we've developed for our Writing Center teaching: Planning and Writing Research Papers, Creating an Argument, \ldots by \cite{Wisconsin:2004}.
+
+\end{itemize}
+
+Finally, before starting to write you might take a look at some of these references.
+
+
+\section{\LaTeX{} Formatting Hints}
+
+Selected \LaTeX{} examples are included to give an impression of how you could add tables, diagrams, or figures to your text. Use \emph{bullet lists} and \emph{emphasised} text sparsely. 
+
+
+%% example for a named paragraph
+%\paragraph{Background.} Describe the background, the prerequisites for your work \ldots
+%\paragraph{Objective.} The aim of this master's thesis is \ldots
+
+%\subsection{Examples for named paragraphs}
+\paragraph{Terms and definitions.}
+Technical terms \ldots\ abbreviations are summarised at the end of the thesis in Chapter~\ref{chap:acronyms} ``\nameref{chap:acronyms}''. For example, \ac{ABI} or \ac{MITM}. If \ac{ABI} is referenced again, only the acronym is printed (as hyperlink though).
+
+To support your readers, include visuals such as diagrams and other graphics (Figure~\ref{fig:engine}). Note the short title used for the list of figures.
+
+
+
+
+\begin{figure}[tp]
+  \centering
+  \copyrightbox[r]{  
+  \includegraphics[keepaspectratio,width=0.95\textwidth]{images/engine}
+  }{\tiny \copyright~Diethard Ohrt}
+  % The short caption should be capitalised
+  % The full caption should hold a full sentence. 
+ \caption[Logo at the Train Engine]{Note the logo attached to the train engine spotted in Kapfenberg main station.}
+  \label{fig:engine}
+\end{figure}
+
+Code listings require the \textit{listings} package which, in turn, requires some settings\footnote{\ldots because the defaults do not fit all purposes}; see command \verb+\lstset{}+ in preamble of this template. Additionally the package \textit{courier} should be used because the defaults do not provide for proper syntax highlighting.
+
+% settings for all listings
+\lstset{
+  caption={Listing subtitles could and should contain whole sentences describing the important aspect of the listing.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:main, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=C,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+
+% listing with some settings, such as float, for this listing only
+%\begin{samepage}% with samepage we keep a FLOATing listing on one page
+%	\begin{lstlisting}[float=tbhp]
+%void main(int argc, char *argv[])
+%{
+%  printf("Hello world!");
+%}
+%	\end{lstlisting}
+%\end{samepage}
+	
+
+In order to see what's possible -- here are two fancy tables, see Table~\ref{tab:olive} and Table~\ref{tab:grey} which show \ldots.
+
+\begin{center}
+  \begin{table}[tp]
+    \begin{tabularx}{\textwidth}{|l|l|p{1cm}|X|}\hline
+      \rowcolor{olivegreen30}
+      \textcolor{white}{\textbf{Version}}
+         &\textcolor{white}{\textbf{Description}}  
+           &  \textcolor{white}{\textbf{Author(s)}}  
+             &\textcolor{white}{\textbf{Date}}\\
+      \hline
+      1.0  
+        & Initial  	  	
+          & Ohrt  	  	  
+            & July 15, 2014\\
+      \hline
+      1.1  
+        & Filled section ``Open Issues''  
+          & Ohrt  	  	  
+            & July 16, 2014\\
+      \hline
+      1.2  
+        & Added section ``Restrictions''  
+          & Ohrt  	  	  
+            & September 15, 2014\\
+      \hline
+      1.3  
+        & Dynamic fields for ``BA'' and ``MA'' 
+          & J.F.  	  	  
+            & September 15, 2018\\
+      \hline    
+      1.4  
+        & Restructuring many sections 
+          & J.F.  	  	  
+            & November 127, 2019\\
+      \hline       
+      \end{tabularx}
+    \caption[Fancy Table]{Olive green heading used for this fancy table.}
+    \label{tab:olive}
+  \end{table}
+\end{center} 
+  
+ \begin{center} 
+  \begin{table}[tbp]
+    \begin{tabular}{ l | l }
+      \rowcolor{gray20}\textbf{Error}  
+        & \textbf{Solution} \\
+      \rowcolor{gray5}Java.lang.OutOfMemoryError: PermGen space
+        & -XX:MaxPermSize=1024M \\
+      \rowcolor{gray5}\textit{(32-/64-bit issue)}
+        & \\
+      \rowcolor{gray20}Error occurred during initialization of VM \textit{or}
+        & increase or remove -Xms value \\
+      \rowcolor{gray20}Could not reserve enough space for object heap
+        & e.g.\ -Xms128m -Xmx512m \\
+      \rowcolor{gray20}  	  	  
+        & \small{(Eclipse default:}\\
+      \rowcolor{gray20}  	  	  
+        & \small{-Xms40m -Xmx512m)} \\
+    \end{tabular}
+    % The short caption should be capitalised
+    % The full caption should hold a full sentence. 
+    \caption[Simple Grey Table]{A more or less simple grey table. Better try to put tables and figures at \textit{top}[t] or at the \textit{bottom}[b] of a page. With \textit{page}[p] you can put them on a separate page. Avoid location specifier \textit{here}[h].}
+    \label{tab:grey}
+  \end{table}
+\end{center}
+
+
+
+Always reference listings in text, such as Listing~\ref{lst:main}. Use line numbers to help the reader to find relevant parts within given code. Referenced listings, tables and figures are written in uppercase first letter: \emph{L}isting X,  \emph{T}able Y and  \emph{F}igure Z.
+
+
+
+
+\subsection{Prototype}
+
+Find in Listing~\ref{lst:democlosure} an example of the JavaScript closure. Only selected (relevant) parts of the original source code have been included. That allows to extract and display parts of working code!
+
+% use environment "samepage", for not breaking 
+% the listing in multiple parts and not spreading the
+% listing over multiple pages
+\begin{samepage} 
+\lstinputlisting[language=JavaScript,
+ float=tp,                % float to the "best" place
+ aboveskip=\floatsep,
+ belowskip=\floatsep,
+ xleftmargin=0cm,         % no extra margins for floats
+ xrightmargin=0cm,        % no extra margins for floats
+ %
+ label=lst:democlosure,   % reference to this listing
+ firstline=10,            % include just a few lines 
+ lastline=88,             % of the given file
+ caption={[Closure]       % Short Title for LOL List of Listings
+          Demo implementation of a JavaScript \emph{Closure}.}
+]{src/closure.js}         % the file to be included
+\end{samepage}
+
+Mathematical expressions are rendered beautifully by \LaTeX. Now enjoy the first Maxwell equation 
+\begin{math} 
+  \text{rot} \vec{H} = \vec{J} + \frac{\partial \vec{D}}{\partial t} 
+\end{math}.
+
+
+
+
+At the end of each chapter you might sum up the contents of the chapter in a sentence or two. Then you might tell the reader what will be presented in the upcoming section (to make her/him curious).
+
+
+  \TODO{You have seen how \LaTeX~works; now remove this Chapter 1.}
+
+\vfill
+% next chapter: start at right side, if two-sided; else just flush page
+\chapterend
+
+
+
+
+%%
+% Hints by Daniela Holzer 2017
+% "instructions for composing degree papers.pdf"
+%
+% Formal Guidelines
+%   Diploma thesis: 17 000 words ± 10% (excluding appendix)
+%   Each of the two Bachelor papers: 10 000 words ± 10% (excluding appendix)
+%% 
