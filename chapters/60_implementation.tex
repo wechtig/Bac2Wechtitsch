@@ -1,10 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Implementation}
-\label{chap:implementation}
+\chapter{Umsetzung}
+\label{chap:Umsetzung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapterstart
 
-Your text here\ldots
-Describe what is relevant and special about your working prototype. State how single features help to solve problem(s) at hand. You might implement only the most relevant features. Features you select from your prioritised feature list assembled in Chapter \ref{chap:concept}. Focus on novel, difficult, or innovative aspects of your prototype. Add visuals such as architectures, diagrams, flows, tables, screenshots to illustrate your work.
-
-\chapterend
+\section{Technologien}
+\subsection{Java}
+Die drei Teilprojekte der Arbeit wurden in Java entwickelt. Die verwendete Java Version ist Java 11. Java wird als plattformunabhängige und robuste Programmiersprache verwendet. Auch in der Entwicklung der mobilen Applikation wird Java eingesetzt. Als Alternative zu Java könnte C-Sharp oder eine JavaScript basierende Webserver-Lösung wie Node.js fungieren
+\subsection{Android}
+Die mobile Applikation ist eine Android-Anwendung. Als Programmiersprache wurde Java verwendet. Eine gute Alternative zu Java bietet Kotlin, da der Code kompakter und einfacher zu schreiben ist \ref{banerjee2018comparative}. Aus Gründen der Einfachheit und Lesbarkeit wurde aber die Programmiersprache Java für die Entwicklung in Android gewählt.
+\subsection{Spring}
+Spring Boot ist ein Java Framework, das im Zuge der Projektarbeit zur Entwicklungder Web-Applikation verwendet wurde. Auch die Userverwaltung und damit auch die Security-Aspekte wurden mit Spring (Spring Security) entwickelt.
+\subsection{Maven}
+Maven ist ein Versionsverwaltungstool mit dem Abhängigkeiten und JARs verwaltetund heruntergeladen werden können.
+\subsection{MongoDB}
+Als Datenbank wird die nicht-relationale Lösung MongoDB verwendet, da es verschie-dene Vorteile gegenüber relationales Datenbankmanagementsystem bietet (siehe Punkt4.4.1). Es gehört zu den dokumentorientierten Datenbanken. MongoDB kann über dieoffiziele Website heruntergeladen und installiert werden.
+\subsection{IntelliJ und Android Studio}
+Als Entwicklungsumgebungen wurden IntelliJ und Android Studio gewählt, da diese IDEs mehrere verschiedene Sprachen unterstützen und Android Studio eine Abwandlung von IntelliJ ist.
+\subsection{Git}
+Git wurde für die Versionsverwaltung verwendet. Ebenso wird in der Applikation mit Git über eine GithubAPI kommuniziert und Daten abgefragt. (siehe Punkt 3.2.1 Konzept: Webapplikation)
