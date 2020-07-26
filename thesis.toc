@@ -43,14 +43,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.3}Spring}{8}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Maven}{9}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.4}Maven und Gradle}{9}{subsection.4.1.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.5}MongoDB}{9}{subsection.4.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.6}IntelliJ und Android Studio}{9}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.6}MongoDB Java Driver}{9}{subsection.4.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.7}Git}{9}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.7}IntelliJ und Android Studio}{9}{subsection.4.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{10}{chapter.5}%
+\contentsline {subsection}{\numberline {4.1.8}Git und SourceTree}{9}{subsection.4.1.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{11}{chapter.6}%
+\contentsline {section}{\numberline {4.2}Userverwaltung}{10}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Gründe für eine Userverwaltung}{10}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Allgemeiner Aufbau}{11}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluation}{12}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{13}{chapter.6}%

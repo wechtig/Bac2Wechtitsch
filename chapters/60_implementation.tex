@@ -7,14 +7,29 @@
 \subsection{Java}
 Die drei Teilprojekte der Arbeit wurden in Java entwickelt. Die verwendete Java Version ist Java 11. Java wird als plattformunabhängige und robuste Programmiersprache verwendet. Auch in der Entwicklung der mobilen Applikation wird Java eingesetzt. Als Alternative zu Java könnte C-Sharp oder eine JavaScript basierende Webserver-Lösung wie Node.js fungieren
 \subsection{Android}
-Die mobile Applikation ist eine Android-Anwendung. Als Programmiersprache wurde Java verwendet. Eine gute Alternative zu Java bietet Kotlin, da der Code kompakter und einfacher zu schreiben ist \ref{banerjee2018comparative}. Aus Gründen der Einfachheit und Lesbarkeit wurde aber die Programmiersprache Java für die Entwicklung in Android gewählt.
+Die mobile Applikation ist eine Android-Anwendung. Als Programmiersprache wurde Java verwendet. Eine gute Alternative zu Java bietet Kotlin, da der Code kompakter und einfacher zu schreiben ist \ref{banerjee2018comparative}. Aus Gründen der Einfachheit und Lesbarkeit wurde aber die Programmiersprache Java für die Entwicklung in Android gewählt. Die Applikation wurde sowohl mit einem virtuellen Android-Emulator, als auch mit einem Android-Device getestet.
 \subsection{Spring}
-Spring Boot ist ein Java Framework, das im Zuge der Projektarbeit zur Entwicklungder Web-Applikation verwendet wurde. Auch die Userverwaltung und damit auch die Security-Aspekte wurden mit Spring (Spring Security) entwickelt.
-\subsection{Maven}
-Maven ist ein Versionsverwaltungstool mit dem Abhängigkeiten und JARs verwaltetund heruntergeladen werden können.
+Spring, bzw. Spring Boot ist ein Java Framework, das im Zuge der Projektarbeit zur Entwicklungder Web-Applikation verwendet wurde. Spring Boot bietet zusätzlich unter anderem einen eingebetteten Server,  mit dem die Applikation schnell und einfach gestartet werden kann. Auch die Userverwaltung und damit auch die Security-Aspekte wurden mit Spring (Spring Security) entwickelt. Als mögliche Alternative zu Spring mit Spring Security kann Java EE mit einem OAuth2 eingesetzt werden. \ref{pressmarSpring}
+\subsection{Maven und Gradle}
+Maven ist ein Versionsverwaltungstool mit dem Abhängigkeiten und JARs verwaltetund heruntergeladen werden können. Maven wird hierbei in der Webapplikation und im Plugin eingesetzt. Eine Alternative zu Maven ist das Tool Gradle, welches in der Android Applikation für das Build-Management eingesetzt wurde.
 \subsection{MongoDB}
-Als Datenbank wird die nicht-relationale Lösung MongoDB verwendet, da es verschie-dene Vorteile gegenüber relationales Datenbankmanagementsystem bietet (siehe Punkt4.4.1). Es gehört zu den dokumentorientierten Datenbanken. MongoDB kann über dieoffiziele Website heruntergeladen und installiert werden.
+Als Datenbank wird die nicht-relationale Lösung MongoDB verwendet, da es verschie-dene Vorteile gegenüber relationales Datenbankmanagementsystem bietet (siehe Punkt4.4.1). Es gehört zu den dokumentorientierten Datenbanken. MongoDB kann über die offiziele Website heruntergeladen und installiert werden. \footnote{https://www.mongodb.com/try/download/community}
+\subsection{MongoDB Java Driver}
+Der MongoDB Java Driver wird für die Kommunikation (Synchronisation und asyn-chrone Interaktion) mit MongoDB eingesetzt. Mit dem Driver werden unter anderem erstellten Benutzer in die Datenbank gespeichert und ausgelesen.
 \subsection{IntelliJ und Android Studio}
-Als Entwicklungsumgebungen wurden IntelliJ und Android Studio gewählt, da diese IDEs mehrere verschiedene Sprachen unterstützen und Android Studio eine Abwandlung von IntelliJ ist.
-\subsection{Git}
-Git wurde für die Versionsverwaltung verwendet. Ebenso wird in der Applikation mit Git über eine GithubAPI kommuniziert und Daten abgefragt. (siehe Punkt 3.2.1 Konzept: Webapplikation)
+Als Entwicklungsumgebungen wurden IntelliJ und Android Studio gewählt, da diese IDEs mehrere verschiedene Sprachen unterstützen und Android Studio eine Abwandlung von IntelliJ ist und daher die Entwicklung sehr einfach und nur minimal unterschiedlich ist.
+\subsection{Git und SourceTree}
+Git wurde für die Versionsverwaltung verwendet. Ebenso wird in der Applikation mit Git über eine GithubAPI kommuniziert und Daten abgefragt. \footnote{https://developer.github.com/v3/} (siehe Punkt 3.2.1 Konzept: Webapplikation). Statt Git kann auch die Software SVN(Apache Subversion) eingesetzt werden, welches aber verschiedene Nachteile hat wie ein schweres Branch-Handling. Als Git-basiertes Versionsverwaltung-Managementtool wird SourceTree verwendet.
+
+\section{Userverwaltung}
+\subsection{Gründe für eine Userverwaltung}
+Die Userwaltung wurde aus verschiedenen Gründen implementiert:
+\begin{itemize} 
+  \item \textbf{Unterstützung für den Benutzer/die Benutzerin} 
+Mit der Unterstützung der Userverwaltung können genauere Informationen und Berichte für den angemeldeten Benutzer angezeigt werden. Voraussetzung dafür ist aber die Integration und Verwendung eines Versionsverwaltungs-Management-Tools. So können die Fehler und Probleme der erstellten Files den Entwickler oder der Entwicklerin zugeordnet werden, welcher auf der Weboberfläche eingesehen werden können. So kann der User seine Fehler überblicken und gezielt ausbessern. Durch diese Individualisierung kann auch eine mögliche Verbesserung der Entwicklungsfähigkeit eintreten.  
+    \item \textbf{Sicherheit und Zugriffsschutz} \\ Ein anderer wichtiger Punkt ist der Security-Aspekt. Die Webapplikation kann sowohl in einem Unternehmen, oder privat auf einem eigenen Server installiert werden. In beiden Fällen ist ein Zugriffsschutz notwendig, um unberechtigten Benutzer den Zugriff zu verweigern und sensible Daten zu schützen. Die Daten, die in der Webapplikation angezeigt werden müssen sehr vertraulich behandelt werden, da in der Weboberfläche neben weniger wichtigen Code-Smells auch zum Beispiel Sicherheitsprobleme angezeigt werden können. Diese Sicherheitsprobleme können von Angreifern ausgenutzt werden. Auch wenn die Applikation in einem gesicherten Firmennetzwerk installiert wird, ist die Implementierung eines Zugriffsschutzes wichtig. 
+\item \textbf{Unterstützung für das Team}
+Eigene Entwicklungsteams werden mithilfe einer Benutzerverwaltung erstellt. Dazu können zu den einzelnen Projekten Entwicklerinnen, Entwickler und andere am Projekt beteiligten Personen (Scrum-Master, Tester, usw.) hinzugefügt werden. Nur Mitglieder in diesen Teams können so die Fehler und Bugs einsehen. Den Usern werden daher nur die Projekte angezeigt, an welchen sie auch beteiligt sind. Außerdem können mithilfe der User- und Teamverwaltung eigene und spezielle Reports erstellt werden.
+\end{itemize}
+
+\subsection{Allgemeiner Aufbau} 
