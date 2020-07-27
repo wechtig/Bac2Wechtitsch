@@ -12,6 +12,8 @@ Die mobile Applikation ist eine Android-Anwendung. Als Programmiersprache wurde 
 Spring, bzw. Spring Boot ist ein Java Framework, das im Zuge der Projektarbeit zur Entwicklungder Web-Applikation verwendet wurde. Spring Boot bietet zusätzlich unter anderem einen eingebetteten Server,  mit dem die Applikation schnell und einfach gestartet werden kann. Auch die Userverwaltung und damit auch die Security-Aspekte wurden mit Spring (Spring Security) entwickelt. Als mögliche Alternative zu Spring mit Spring Security kann Java EE mit einem OAuth2 eingesetzt werden. \ref{pressmarSpring}
 \subsection{Maven und Gradle}
 Maven ist ein Versionsverwaltungstool mit dem Abhängigkeiten und JARs verwaltetund heruntergeladen werden können. Maven wird hierbei in der Webapplikation und im Plugin eingesetzt. Eine Alternative zu Maven ist das Tool Gradle, welches in der Android Applikation für das Build-Management eingesetzt wurde.
+\subsection{Thymeleaf}
+Tyhmeleaf ist eine Template-Engine, die in HTML eingesetzt werden kann. Eine Template-Engine nimmt ein vorgefertigtes HTML-Skript (Template) und initialisiert dynamische Werte in die angegebenen Platzhalter. Thymeleaf gehört zu den Server-Side-Engines, das heißt die angezeigte Seite wird am Server generiert \ref{searchmetrics}. Thymeleaf wird in der Webapplikation verwendet, um die Userverwaltung in der Weboberfläche zu implementieren. Der Vorteil dabei ist, da so eine einfache Interaktion mit dem Server stattfinden kann. Diese Interaktion ist beispielsweise die Anmeldung, bei der das angegebene Passwort validiert, überprüft und eine Validierungsnachricht zurückgegeben wird. Als Alternative kann JSF eingesetzt werden. 
 \subsection{MongoDB}
 Als Datenbank wird die nicht-relationale Lösung MongoDB verwendet, da es verschie-dene Vorteile gegenüber relationales Datenbankmanagementsystem bietet (siehe Punkt4.4.1). Es gehört zu den dokumentorientierten Datenbanken. MongoDB kann über die offiziele Website heruntergeladen und installiert werden. \footnote{https://www.mongodb.com/try/download/community}
 \subsection{MongoDB Java Driver}
@@ -23,7 +25,7 @@ Git wurde für die Versionsverwaltung verwendet. Ebenso wird in der Applikation 
 
 \section{Userverwaltung}
 \subsection{Gründe für eine Userverwaltung}
-Die Userwaltung wurde aus verschiedenen Gründen implementiert:
+Ein Usermanagement mit Sicherheitsimplementierungen ist ein integraler und wichtiger Teil einer Webapplikation, in der sensible Daten behandelt werden, ebenso eignet sich in den gegebenen Anwendungsfällen eine Benutzerverwaltung besonders. Die Userwaltung ergibt daher folgende Vorteile:
 \begin{itemize} 
   \item \textbf{Unterstützung für den Benutzer/die Benutzerin} 
 Mit der Unterstützung der Userverwaltung können genauere Informationen und Berichte für den angemeldeten Benutzer angezeigt werden. Voraussetzung dafür ist aber die Integration und Verwendung eines Versionsverwaltungs-Management-Tools. So können die Fehler und Probleme der erstellten Files den Entwickler oder der Entwicklerin zugeordnet werden, welcher auf der Weboberfläche eingesehen werden können. So kann der User seine Fehler überblicken und gezielt ausbessern. Durch diese Individualisierung kann auch eine mögliche Verbesserung der Entwicklungsfähigkeit eintreten.  
@@ -33,3 +35,9 @@ Eigene Entwicklungsteams werden mithilfe einer Benutzerverwaltung erstellt. Dazu
 \end{itemize}
 
 \subsection{Allgemeiner Aufbau} 
+\subsubsection{User Flow}
+Die Benutzerin oder der Benutzer sehen beim Aufrufen der Website, automatisch den Login. Ohne einer richtigen Anmeldung, kann man nicht auf die API oder die Webanwendung zugreifen. Der Benutzerin, der Benutzer muss sich vorher mit einer Email-Adresse und einem Passwort registrieren. Wenn eine Abmeldung nicht manuell erfolgt, so wird der User automatisch abgemeldet.
+\subsubsection{Berechtigung zur Datenanzeige}
+Um auf Projekt-Inhalte zugreifen zu können, muss ein Projektmitglied die Email-Adresse des neuen Teammitglieds zum Projekt hinzufügen. Erst wenn die Email-Adresse für das Projekt hinterlegt ist, werden die Fehler und Bugs des Projekts angezeigt. Eine andere Möglichkeit dieses Sicherheitsmechanismus wäre eine Anfrage der Entwicklerin oder des Entwicklers an das Team, welches dann die Email-Adresse akzeptieren oder ablehnen kann. So können keine unberechtigten Personen auf sensible Daten zugreifen. Eine Hierarchie-Regelung bzw. verschiedene Berechtigungsstufen sind nicht implementiert, da das Projektteam als Scrum-Team angesehen wird und im Scrum-Prozess alle Mitglieder gleichberechtigt sind \ref{scrumprozess}. Jedes Teammitglied kann daher einen neues Teammitglied mit der Email-Adresse hinzufügen.
+
+\subsection{Implementierung des Usermanagements mit Spring Security}
