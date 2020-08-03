@@ -2184,6 +2184,14 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">cohn2003introducing</bcf:citekey>
+    <bcf:citekey order="2">beck2001agile</bcf:citekey>
+    <bcf:citekey order="3">teamculture</bcf:citekey>
+    <bcf:citekey order="4">teamcultureGrolman</bcf:citekey>
+    <bcf:citekey order="5">ecksteinTeams</bcf:citekey>
+    <bcf:citekey order="6">ecksteinTeams</bcf:citekey>
+    <bcf:citekey order="7">ecksteinTeams</bcf:citekey>
+    <bcf:citekey order="8">fowler2018refactoring</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
