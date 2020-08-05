@@ -2186,12 +2186,17 @@
   <bcf:section number="0">
     <bcf:citekey order="1">cohn2003introducing</bcf:citekey>
     <bcf:citekey order="2">beck2001agile</bcf:citekey>
-    <bcf:citekey order="3">teamculture</bcf:citekey>
-    <bcf:citekey order="4">teamcultureGrolman</bcf:citekey>
-    <bcf:citekey order="5">ecksteinTeams</bcf:citekey>
+    <bcf:citekey order="3">boos2017fuhrung</bcf:citekey>
+    <bcf:citekey order="4">teamculture</bcf:citekey>
+    <bcf:citekey order="5">teamcultureGrolman</bcf:citekey>
     <bcf:citekey order="6">ecksteinTeams</bcf:citekey>
     <bcf:citekey order="7">ecksteinTeams</bcf:citekey>
-    <bcf:citekey order="8">fowler2018refactoring</bcf:citekey>
+    <bcf:citekey order="8">ecksteinTeams</bcf:citekey>
+    <bcf:citekey order="9">verwijsTeams</bcf:citekey>
+    <bcf:citekey order="10">mantyla2008types</bcf:citekey>
+    <bcf:citekey order="11">fowler2018refactoring</bcf:citekey>
+    <bcf:citekey order="12">banerjee2018comparative</bcf:citekey>
+    <bcf:citekey order="13">searchmetrics</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

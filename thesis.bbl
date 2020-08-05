@@ -19,6 +19,56 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{banerjee2018comparative}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f86634f63fac8c1cd5a6f445831f65f7}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Madhurima},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e35028c8e62b6a1a097f77cbcf05251}{%
+           family={Bose},
+           familyi={B\bibinitperiod},
+           given={Subham},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77725c33ce3fe304b5983a9e8db2cbe1}{%
+           family={Kundu},
+           familyi={K\bibinitperiod},
+           given={Aditi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fceb25c3ce393e6e77d3d4791f2d100}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Madhuleena},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {International Journal of Advanced Research in Computer Science}%
+      }
+      \strng{namehash}{58505917550ac1d4df86bda390188965}
+      \strng{fullhash}{530e9fcd491af6370f66892d56465e88}
+      \strng{bibnamehash}{530e9fcd491af6370f66892d56465e88}
+      \strng{authorbibnamehash}{530e9fcd491af6370f66892d56465e88}
+      \strng{authornamehash}{58505917550ac1d4df86bda390188965}
+      \strng{authorfullhash}{530e9fcd491af6370f66892d56465e88}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Research in Computer Science}
+      \field{number}{3}
+      \field{title}{A comparative study: Java vs kotlin programming in android application development}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{41}
+      \range{pages}{1}
+    \endentry
     \entry{beck2001agile}{misc}{}
       \name{author}{17}{}{%
         {{un=0,uniquepart=base,hash=c5dcbe71f60a8d55caa11fe1493614d0}{%
@@ -150,6 +200,45 @@
       \endverb
       \keyw{imported}
     \endentry
+    \entry{boos2017fuhrung}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=05dcde7cea84eaa2370b6e1a86dca324}{%
+           family={Boos},
+           familyi={B\bibinitperiod},
+           given={Margarete},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edb233c1f05882670c4d9e7ac9f69a36}{%
+           family={Hardwig},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bb219fddf04b0551895a16d9731b31d}{%
+           family={Riethm{ü}ller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Hogrefe Verlag}%
+      }
+      \strng{namehash}{5129280bfb276509c96171afdc48cadc}
+      \strng{fullhash}{5129280bfb276509c96171afdc48cadc}
+      \strng{bibnamehash}{5129280bfb276509c96171afdc48cadc}
+      \strng{authorbibnamehash}{5129280bfb276509c96171afdc48cadc}
+      \strng{authornamehash}{5129280bfb276509c96171afdc48cadc}
+      \strng{authorfullhash}{5129280bfb276509c96171afdc48cadc}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Führung und Zusammenarbeit in verteilten Teams}
+      \field{year}{2017}
+    \endentry
     \entry{teamculture}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a604673f093a79ca1032994138d63973}{%
@@ -214,6 +303,33 @@
       \field{year}{2003}
       \field{pages}{74\bibrangedash 78}
       \range{pages}{5}
+    \endentry
+    \entry{searchmetrics}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=34d0805e1ddfc892491927f07c0f3f3a}{%
+           family={Darko},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \strng{fullhash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \strng{bibnamehash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \strng{authorbibnamehash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \strng{authornamehash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \strng{authorfullhash}{34d0805e1ddfc892491927f07c0f3f3a}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JS SEO Server-Side Rendering}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://blog.searchmetrics.com/de/javascript-seo-server-side-rendering/
+      \endverb
+      \verb{url}
+      \verb https://blog.searchmetrics.com/de/javascript-seo-server-side-rendering/
+      \endverb
     \endentry
     \entry{ecksteinTeams}{book}{}
       \name{author}{1}{}{%
@@ -297,6 +413,71 @@
       \endverb
       \verb{url}
       \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249#:~:text=Unter%20Teamkultur%20versteht%20man%20die,entwickelt%2C%20verstetigt%20und%20mitunter%20verfestigt.
+      \endverb
+    \endentry
+    \entry{mantyla2008types}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=066074a6c08721748caa849dddd96986}{%
+           family={M{ä}ntyl{ä}},
+           familyi={M\bibinitperiod},
+           given={Mika\bibnamedelima V},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65e0422464edb889c80ecec1c9051218}{%
+           family={Lassenius},
+           familyi={L\bibinitperiod},
+           given={Casper},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6cbbb6f57269c53cd96fef69982346c9}
+      \strng{fullhash}{6cbbb6f57269c53cd96fef69982346c9}
+      \strng{bibnamehash}{6cbbb6f57269c53cd96fef69982346c9}
+      \strng{authorbibnamehash}{6cbbb6f57269c53cd96fef69982346c9}
+      \strng{authornamehash}{6cbbb6f57269c53cd96fef69982346c9}
+      \strng{authorfullhash}{6cbbb6f57269c53cd96fef69982346c9}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Software Engineering}
+      \field{number}{3}
+      \field{title}{What types of defects are really discovered in code reviews?}
+      \field{volume}{35}
+      \field{year}{2008}
+      \field{pages}{430\bibrangedash 448}
+      \range{pages}{19}
+    \endentry
+    \entry{verwijsTeams}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cbde1a78122103efc577ff5ab9a6dd25}{%
+           family={Verwijs},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \strng{fullhash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \strng{bibnamehash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \strng{authorbibnamehash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \strng{authornamehash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \strng{authorfullhash}{cbde1a78122103efc577ff5ab9a6dd25}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teams and a shared understanding of code quality}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://medium.com/the-liberators/teams-and-a-shared-understanding-of-code-quality-the-11-rules-of-quality-f4ab7e07304
+      \endverb
+      \verb{url}
+      \verb https://medium.com/the-liberators/teams-and-a-shared-understanding-of-code-quality-the-11-rules-of-quality-f4ab7e07304
       \endverb
     \endentry
   \enddatalist
