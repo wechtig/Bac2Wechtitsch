@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  5 AUG 2020 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  12 AUG 2020 19:27
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1361,7 +1361,16 @@ Overfull \hbox (7.03568pt too wide) in paragraph at lines 42--45
 t-terns und Architektur-
  []
 
-[8] [9])
+[8]
+
+LaTeX Warning: Reference `khanambarriers' on page 9 undefined on input line 52.
+
+
+
+LaTeX Warning: Reference `kukrejaMaintainability' on page 9 undefined on input 
+line 55.
+
+[9])
 \openout2 = `chapters/40_concept.aux'.
 
  (chapters/40_concept.tex
@@ -1372,7 +1381,7 @@ Kapitel 3.
 
 
 ]
-<images/infrastruktur.PNG, id=215, 528.47438pt x 283.0575pt>
+<images/infrastruktur.PNG, id=219, 528.47438pt x 283.0575pt>
 File: images/infrastruktur.PNG Graphic file (type png)
 <use images/infrastruktur.PNG>
 Package pdftex.def Info: images/infrastruktur.PNG  used on input line 24.
@@ -1424,12 +1433,32 @@ Overfull \hbox (8.3232pt too wide) in paragraph at lines 41--42
 rst wenn die Email-Adresse
  []
 
-) [16] [17]
+[16]
+Overfull \hbox (185.8282pt too wide) in paragraph at lines 47--47
+[][][]\T1/ptm/m/n/10 https://docs.spring.io/spring-security/site/docs/4.2.15.RE
+LEASE/apidocs/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.
+html| 
+ []
+
+(D:\MikTex\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 64
+.
+
+(D:\MikTex\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+ [17]) [18]
 \openout2 = `chapters/80_evaluation.aux'.
 
  (chapters/80_evaluation.tex
 Kapitel 5.
-[18
+[19
 
 
 
@@ -1438,7 +1467,7 @@ Kapitel 5.
 
  (chapters/90_conclusion.tex
 Kapitel 6.
-[19
+[20
 
 
 
@@ -1449,18 +1478,14 @@ Overfull \hbox (0.38263pt too wide) in paragraph at lines 113--113
 dhu-lee-na Muk-her-jee (2018).
  []
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
-2.
-(D:\MikTex\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+
 Overfull \hbox (42.70993pt too wide) in paragraph at lines 113--113
 [][]\T1/ptm/m/n/12 Darko (2019). \T1/ptm/m/it/12 JS SEO Server-Side Ren-de-ring
 \T1/ptm/m/n/12 . [on-li-ne] [][]$\T1/pcr/m/n/12 https : / / blog . searchmetric
 s .
  []
 
-[20
+[21
 
 
 
@@ -1470,7 +1495,7 @@ Overfull \hbox (41.38197pt too wide) in paragraph at lines 113--113
 shared -[] understanding -[]
  []
 
-[21]
+[22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (thesis.aux (chapters/01_titlepage.aux) (chapters/02_declaration.aux)
@@ -1481,7 +1506,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C347EF80D313EF4FE0671B6B1D4DC767;1356.
+(rerunfilecheck)             Checksum: E6E996EA38F3AEDE144504BB7082186A;1356.
 
 
 LaTeX Warning: There were undefined references.
@@ -1491,26 +1516,30 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29586 strings out of 480900
- 534295 string characters out of 2917036
- 1248463 words of memory out of 3000000
- 44736 multiletter control sequences out of 15000+200000
- 591485 words of font info for 96 fonts, out of 3000000 for 9000
+ 30025 strings out of 480900
+ 538809 string characters out of 2917036
+ 1302610 words of memory out of 3000000
+ 45123 multiletter control sequences out of 15000+200000
+ 598147 words of font info for 112 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  73i,7n,68p,1190b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{D:/MikTex/fonts/enc/dvips/base/8r.enc}<D:/MikTex/fonts/type1/urw/courier/ucrr8
-a.pfb><D:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/MikTex/fonts/type1/urw
-/times/utmb8a.pfb><D:/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/
-type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (28 pages, 194253 bytes).
+{D:/MikTex/fonts/enc/dvips/base/8r.enc}<D:/MikTex/fonts/type1/urw/courier/ucrb8
+a.pfb><D:/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><D:/MikTex/fonts/type1/urw/
+helvetic/uhvr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmb8a.pfb><D:/MikTex/font
+s/type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/Mi
+kTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (29 pages, 218844 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 90 named destinations out of 1000 (max. 500000)
+ 425 PDF objects out of 1000 (max. 8388607)
+ 135 named destinations out of 1000 (max. 500000)
  175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -49,9 +49,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Refactoring}{8}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2.1}Probleme beim Refactoring in Teams}{9}{subsubsection.2.3.2.1}%
+\contentsline {subsection}{\numberline {2.3.3}Probleme beim Refactoring}{9}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Maintainability}{9}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Maintainability}{9}{subsection.2.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Konzept}{10}{chapter.3}%
 \defcounter {refsection}{0}\relax 
@@ -99,8 +99,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.3}Implementierung des Usermanagements mit Spring Security}{17}{subsection.4.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{18}{chapter.5}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Allgemein}{17}{subsubsection.4.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{19}{chapter.6}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}Security Service}{17}{subsubsection.4.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{21}{chapter*.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Security Konfigurationen}{18}{subsubsection.4.2.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.3.4}Controller und Oberfläche}{18}{subsubsection.4.2.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{20}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{22}{chapter*.6}%

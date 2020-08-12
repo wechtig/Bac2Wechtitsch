@@ -41,3 +41,84 @@ Die Benutzerin oder der Benutzer sehen beim Aufrufen der Website, automatisch de
 Um auf Projekt-Inhalte zugreifen zu können, muss ein Projektmitglied die Email-Adresse des neuen Teammitglieds zum Projekt hinzufügen. Erst wenn die Email-Adresse für das Projekt hinterlegt ist, werden die Fehler und Bugs des Projekts angezeigt. Eine andere Möglichkeit dieses Sicherheitsmechanismus wäre eine Anfrage der Entwicklerin oder des Entwicklers an das Team, welches dann die Email-Adresse akzeptieren oder ablehnen kann. So können keine unberechtigten Personen auf sensible Daten zugreifen. Eine Hierarchie-Regelung bzw. verschiedene Berechtigungsstufen sind nicht implementiert, da das Projektteam als Scrum-Team angesehen wird und im Scrum-Prozess alle Mitglieder gleichberechtigt sind \ref{scrumprozess}. Jedes Teammitglied kann daher einen neues Teammitglied mit der Email-Adresse hinzufügen.
 
 \subsection{Implementierung des Usermanagements mit Spring Security}
+\subsubsection{Allgemein}
+Die Benutzerinnen und Benutzer werden in der Datenbank gespeichert. In der Datenbank wird dazu eine eigene Collection für die User angelegt. Die Passwörter werden verschlüsselt. In der Weboberfläche werden die Daten in einer Thymeleaf-UI eingegeben. Dazu müssen die Dependencies \textit{thymeleaf-layout-dialect} und \textit{spring-boot-starter-security} eingebunden werden. 
+\subsubsection{Security Service}   
+Im Security Service werden die Userdaten ausgelesen und gespeichert. Das Service implementiert die Spring-Security Schnittstelle \textit{UserDetailsService}. Beim Speichern wird das Passwort des an die Methode übergebenen Users überschrieben (siehe \ref{lst:phase}). Der \textit{BCryptPasswordEncoder} wird hierbei von Spring definiert und verschlüsselt das Passwort als Hash \footnote{https://docs.spring.io/spring-security/site/docs/4.2.15.RELEASE/apidocs/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.html}. 
+
+\lstset{
+  caption={Speichern und Auslesen des Users.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:phase, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+
+% listing with some settings, such as float, for this listing only
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+@Autowired
+private BCryptPasswordEncoder passwordEncoder;
+
+public void saveUser(User user) {
+    user.setPassword(
+       passwordEncoder.encode(user.getPassword()));
+    mpngoUserService.saveUser(user);
+}
+
+@Override
+public UserDetails loadUserByUsername(String email) 
+  throws UsernameNotFoundException {
+
+    User user = passwordEncoder.findByEmail(email);
+    if (user != null) {
+      List<GrantedAuthority> authorities =     
+        getUserAuthority(user.getRoles());
+          return authenticateUser(user, authorities);
+    } else {
+          throw new UsernameNotFoundException
+             ("username not found");
+    }
+}
+	\end{lstlisting}
+\end{samepage}
+Die Passwort-Überprüfung und der Aufruf der Methode \textit{loadUserByUsername} wird hierbei von Spring selbst implementiert.  Dazu muss das Datenbank-Objekt \textit{User} zum Spring-Objekt \textit{UserDetails} gemappt und eine eigene Configuration-Klassen implementiert werden (siehe Listing \ref{lst:config}). 
+
+\lstset{
+  caption={Konfiguration für das Spring Security UserService.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:config, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+
+% listing with some settings, such as float, for this listing only
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+@Bean
+public UserDetailsService userDetailService() {
+    return new UserSecurityService();
+}
+
+@Override
+protected void configure
+   (AuthenticationManagerBuilder auth) throws Exception {
+     UserDetailsService detailsService = userDetailService();
+     auth.userDetailsService(detailsService)
+        .passwordEncoder(bCryptPasswordEncoder);
+}
+	\end{lstlisting}
+\end{samepage}
+Werden hier andere Datenbanken oder Services implementiert, so muss nur die Implementation für das Repository bzw. in diesem Fall das \textit{mpngoUserService} ausgetauscht werden. 
+\subsubsection{Security Konfigurationen}
+\subsubsection{Controller und Oberfläche} 
