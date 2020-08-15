@@ -2197,6 +2197,8 @@
     <bcf:citekey order="11">fowler2018refactoring</bcf:citekey>
     <bcf:citekey order="12">banerjee2018comparative</bcf:citekey>
     <bcf:citekey order="13">searchmetrics</bcf:citekey>
+    <bcf:citekey order="14">springSecBook</bcf:citekey>
+    <bcf:citekey order="15">springSecBook</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

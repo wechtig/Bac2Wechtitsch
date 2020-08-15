@@ -87,7 +87,7 @@ public UserDetails loadUserByUsername(String email)
 }
 	\end{lstlisting}
 \end{samepage}
-Die Passwort-Überprüfung und der Aufruf der Methode \textit{loadUserByUsername} wird hierbei von Spring selbst implementiert.  Dazu muss das Datenbank-Objekt \textit{User} zum Spring-Objekt \textit{UserDetails} gemappt und eine eigene Configuration-Klassen implementiert werden (siehe Listing \ref{lst:config}). 
+Die Passwort-Überprüfung und der Aufruf der Methode \textit{loadUserByUsername} wird hierbei von Spring selbst implementiert.  Dazu muss das Datenbank-Objekt \textit{User} zum Spring-Objekt \textit{UserDetails} gemappt und eine eigene Configuration-Klassen implementiert werden (siehe Listing \ref{lst:config}). Im Security-Service sind ebenso Berechtigungsüberprüfungen implementiert. Dazu müssen Rollen erstellt und den Benutzer zugewiesen werden. Diese Rollen bzw. Berechtigungen werden mithilfe der \textit{GrantedAuthority} gespeichert und ausgelesen.
 
 \lstset{
   caption={Konfiguration für das Spring Security UserService.}, 
@@ -121,4 +121,42 @@ protected void configure
 \end{samepage}
 Werden hier andere Datenbanken oder Services implementiert, so muss nur die Implementation für das Repository bzw. in diesem Fall das \textit{mpngoUserService} ausgetauscht werden. 
 \subsubsection{Security Konfigurationen}
+Um die Applikation (URLs der einzelnen Unterseiten) und die API schützen zu können, müssen nun weitere Konfigurationen hinzugefügt werden ~\parencite{springSecBook}. Dazu müssen die einzelnen URLs für die Anzeige der Daten gesichert werden, während hingegen die URLs für den Login und den Website-Aufruf frei zugänglich sein müssen. Auch die Logout-URL kann hier angegeben werden \ref{lst:configurls}.
+\lstset{
+  caption={Konfiguration für die Sicherheit der URLs.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:configurls, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+
+% listing with some settings, such as float, for this listing only
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+...
+http.antMatchers("/login").permitAll()
+.antMatchers("/reports").hasAuthority("USER")
+.and().logout()
+.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+\end{lstlisting}
+\end{samepage}
+Um auf den Login reagieren zu können, wird ein \textit{AuthenticationSuccessHandler} verwendet, der nach dem Login den User auf die Weboberfläche der Datenanzeige weiterleitet. Hierbei sind im \textit{AuthenticationSuccessHandler} auch noch Überprüfungen implementiert, die den User je nach Rolle (Admin oder User) weiterleiten. 
 \subsubsection{Controller und Oberfläche} 
+Im Gegensatz zu den anderen Teilen der Webapplikation ist der Login mit Thymeleaf erstellt worden, da so die Login-Überprüfung und das Handling einfach implementiert werden kann. Auch die Navigationsleiste ist mit Thymeleaf implementiert, um auch die Logout-Funktion einfach zu gestalten. Ebenso kann in der Navigationsleiste der angemeldete User eingesehen werden (siehe Abbildung \ref{fig:configuration}). Um Thymeleaf verwenden zu können, ist ein Controller implementiert, der zu den Thymeleaf-Seiten Get-Methoden mit einer \textit{ModelAndView} zur Verfügung stellt. Im \textit{ModelAndView} wird das Model (User) und die View (z.B. Thymeleaf-Login-Page) gespeichert. Als Get-Path wird der Pfad des Thymeleaf-Templates angegeben ~\parencite[Seite 160]{springSecBook}. In der Weboberfläche kann so einfach auf die Daten des Users, zum Beispiel Name und Rechte, zugegriffen werden.
+\subsection{Projektkonfiguration für Teammitglieder}
+In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts angezeigt und neue Teammitglieder hinzugefügt werden. Dazu muss der angemeldete Benutzer selbst Teil des Teams sein. Um eine neuen User zum Projekt hinzuzufügen muss die Email angegeben werden (siehe Abbildung \ref{fig:configuration}). Der eingeladene User kann daraufhin die Daten des Projekts (Fehler, Bugs, Errors, Charts, usw.) auf der Webseite einsehen. Auf der Konfigurationsseite kann auch eine Projektbeschreibung und ein Link für die Versionsverwaltung hinzugefügt werden (siehe Punkt TODO). 
+\begin{figure}[tp]
+  \centering
+  \includegraphics[height=6cm]{images/configuration.PNG}
+  % The short caption should be capitalised
+  % The full caption should hold a full sentence. 
+ \caption[Konfiguration für das Projekt und Team]{Unterseite für verschiedene Konfigurationen für das Projekt und das Team.}
+  \label{fig:configuration}
+\end{figure}
+\section{Anbindung der Versionsverwaltung für spezifische User-Unterstützung}
+\chapterend
