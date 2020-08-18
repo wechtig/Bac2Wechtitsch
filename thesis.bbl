@@ -266,6 +266,30 @@
       \verb https://www.business2community.com/strategy/improve-software-development-culture-product-quality-01730187#QqiIw8txjlR9LGIL.97
       \endverb
     \endentry
+    \entry{cheaitoMaintainability}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b174b6115bc3b9b9203a4608d5da5aab}{%
+           family={Cheaito},
+           familyi={C\bibinitperiod},
+           given={Frappier},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \strng{fullhash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \strng{bibnamehash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \strng{authorbibnamehash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \strng{authornamehash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \strng{authorfullhash}{b174b6115bc3b9b9203a4608d5da5aab}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Defining and Measuring Maintainability}
+      \field{year}{2011}
+    \endentry
     \entry{cohn2003introducing}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -330,6 +354,30 @@
       \verb{url}
       \verb https://blog.searchmetrics.com/de/javascript-seo-server-side-rendering/
       \endverb
+    \endentry
+    \entry{dhillonMaintainability}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4947fb5281c13421cef6a2a64fea20ea}{%
+           family={Dhillon},
+           familyi={D\bibinitperiod},
+           given={Balbir\bibnamedelima S},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4947fb5281c13421cef6a2a64fea20ea}
+      \strng{fullhash}{4947fb5281c13421cef6a2a64fea20ea}
+      \strng{bibnamehash}{4947fb5281c13421cef6a2a64fea20ea}
+      \strng{authorbibnamehash}{4947fb5281c13421cef6a2a64fea20ea}
+      \strng{authornamehash}{4947fb5281c13421cef6a2a64fea20ea}
+      \strng{authorfullhash}{4947fb5281c13421cef6a2a64fea20ea}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Maintainability Tools and Specific Maintainability Design Considerations}
+      \field{year}{2006}
     \endentry
     \entry{ecksteinTeams}{book}{}
       \name{author}{1}{}{%
@@ -452,6 +500,33 @@
       \field{year}{2008}
       \field{pages}{430\bibrangedash 448}
       \range{pages}{19}
+    \endentry
+    \entry{springSecBook}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9ae7095d402f3b83e2f9a6b9cbd4492}{%
+           family={Simons},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt}%
+      }
+      \strng{namehash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \strng{fullhash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \strng{bibnamehash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \strng{authorbibnamehash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \strng{authornamehash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \strng{authorfullhash}{e9ae7095d402f3b83e2f9a6b9cbd4492}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spring Boot 2}
+      \field{year}{2018}
     \endentry
     \entry{verwijsTeams}{online}{}
       \name{author}{1}{}{%

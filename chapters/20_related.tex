@@ -38,7 +38,7 @@ Bezüglich der Code Qualität und die Entwicklung in Teams, gibt es verschiedene
 \item Code Qualität definieren \\
 Zu Beginn der Code Qualität sollte der Begriff genauer definiert werden. Hierzu können unter anderem mehrere Punkte zählen: Wie viel macht Prozent macht die Test Coverage aus? Wie viele Fehler und Warnungen darf ein Analyse-Tool werfen? Wie einfach ist der Code zu verstehen? 
 \item Code Qualität unterstützen \\
-Code Qualität ist ein wichtiger Aspekt in der Software Entwicklung. Deshalb sollte das Team genug Zeit dafür in Anspruch nehmen.
+Code Qualität ist ein wichtiger Aspekt in der Software Entwicklung. Deshalb sollte das Team genug Zeit dafür in Anspruch nehmen. Ebenso muss die Projektleitung und das Management Ressourcen für die Code Qualität freigeben.
 \item Reviews \\
 In Code Reviews werden die Teilergebnisse in einer Iteration betrachtet und überprüft. Dies geschieht durch die anderen Teammitglieder, die den Code korregieren und auf Fehlern untersuchen, es können aber auch Patterns und Architektur-Entwürfe überprüft werden. Code Reviews sollten direkt in den Entwicklungsprozess eingebunden werden. So können sie beispielsweise in Form von Pull Requests in den Git-Workflow integriert werden. Bei einem Code Review werden daher sowohl der Code als auch die Kenntnisse des Reviewers verbessert. 
 In Code Reviews werden meisten funktionelle und Probleme bei der Evolvabilität festgestellt. ~\parencite{mantyla2008types}. Unter Evolvabilität versteht man die Fähigkeit einer Software weiterentwickelt zu werden und neuen Anforderungen gerecht zu werden. Besonders für neue Entwicklerinnen und Entwickler sind Code Reviews ein gute Möglichkeit, um mit dem Code des Projekts vertraut zu werden.
@@ -52,5 +52,19 @@ Beim Refactoring wird der Code verbessert, ohne dass das Verhalten des Programms
 Beim Refactoring können mehrere verschiedene Probleme auftreten, die das Refactoring erschweren. Beispielsweise kann die unkontrollierte Anbindung von vielen Interfaces, den Aufwand des Refactorings einer Klasse stark steigern. Auch das häufige Umbenennen von Methoden, Klassen oder Variablen kann aus zwei Gründen problematisch werden: Erstens führt es zu einer Kette von Nachfolgeänderungen und zweitens können auch Probleme auftreten, wenn mit dem Team die Änderungen nicht kommuniziert werden, da zum Beispiel die Methoden bzw. Klassen nicht mehr gefunden oder die Methodensignatur sich ändert. Auch fehlende Unit-Tests und häufige Änderungen der Architektur und des Designs sind ein Probleme für das Team und die Qualität der Software. \ref{khanambarriers} \\
 Um das Refactoring effektiver zu gestalten, sollten die Ziele und die verschiedenen Änderungen im Team besprochen werden. Ebenso kann auch beim Refactoring Pair bzw. Mob-Programming eingesetzt werden, da dadurch der Lerneffekt und das Wissen der Teammitglieder über den Code gesteigert werden kann, diese Methode ist aber aufgrund der 
 \subsection{Maintainability}
-Unter Maintainability bzw. Wartbarkeit versteht wie einfach Änderungen und Erweiterungen in der Software durchgeführt werden können. Aber auch Bug Fixing und das Ausbessern von Security-Problemen kann durch eine bessere Maintainability vereinfacht werden. Die Kriterien der Maintainability können hierbei sein: Testbarkeit, Einfachheit und Aufwand zur Veränderung. \ref{kukrejaMaintainability}. Um die Maintainability zu steigern sollten kleine Methoden und Klassen geschrieben werden, Code nicht doppelt geschrieben werden, Tests implementiert werden, Architektur lose gekoppelt sein und die Größe des Codes minimal sein.
+Unter Maintainability bzw. Wartbarkeit versteht wie einfach Änderungen und Erweiterungen in der Software durchgeführt werden können. Aber auch Bug Fixing und das Ausbessern von Security-Problemen kann durch eine bessere Maintainability vereinfacht werden. Die Kriterien der Maintainability können hierbei sein: Testbarkeit, Einfachheit und Aufwand zur Veränderung. \ref{kukrejaMaintainability}. Um die Maintainability zu steigern sollten kleine Methoden und Klassen geschrieben werden, Code nicht doppelt geschrieben werden, Tests implementiert werden, Architektur lose gekoppelt sein und die Größe des Codes minimal sein. Die Kosten für die Wartbarkeit werden in drei Teile unterschieden: Korrektive Maßnahmen (Beinhaltet das ausbessern von Fehlern im Code für die funktionalen Anforderungen), Adaptive Maßnahmen (Beinhaltet die Vorbereitung des Codes für die Implementierung von neuen Features) und Design Maßnahmen (Beinhaltet das Ausbessern des Design oder die Erhöhung der Performance. Wird oft durch Reviews oder Audits ausgelöst) ~\parencite{cheaitoMaintainability}.
+\subsubsection{Metriken für die Maintainability}
+Die Metriken für die Wartbarkeit können unterschiedlich sein und sollten daher im Team definiert werden. So kann bei der Entwicklung im Team auf bestimmte Metriken mehr acht gegeben werden. Die Metriken hängen aber auch von der Art des Projekts (Programmiersprachen, Größe, Einsatzgebiet) stark ab. \\
+Einige herkömmliche Metriken können unter anderem sein:
+
+\begin{itemize} 
+\item Ausprägung der Kopellung zwischen den Modulen 
+\item Kohäsion (Abbildung der Funktionalität durch einen bestimmten Codeteil)
+\item Komplexität im Design \\
+Als wichtigste Design-Faktoren gelten Accessibility, Test points und Controls. ~\parencite{dhillonMaintainability}.
+\item McCabe-Metrik (Anzahl der Knoten)
+\item Anzahl der Kommentare
+\item Länge der Variablennamen
+\item Größe der Klassen und Methoden
+\end{itemize}
 \chapterend

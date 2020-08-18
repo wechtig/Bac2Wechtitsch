@@ -24,7 +24,7 @@ Als Entwicklungsumgebungen wurden IntelliJ und Android Studio gewählt, da diese
 Git wurde für die Versionsverwaltung verwendet. Ebenso wird in der Applikation mit Git über eine GithubAPI kommuniziert und Daten abgefragt. \footnote{https://developer.github.com/v3/} (siehe Punkt 3.2.1 Konzept: Webapplikation). Statt Git kann auch die Software SVN(Apache Subversion) eingesetzt werden, welches aber verschiedene Nachteile hat wie ein schweres Branch-Handling. Als Git-basiertes Versionsverwaltung-Managementtool wird SourceTree verwendet.
 
 \section{Userverwaltung}
-\subsection{Gründe für eine Userverwaltung}
+\subsection{Vorteile der Userverwaltung}
 Ein Usermanagement mit Sicherheitsimplementierungen ist ein integraler und wichtiger Teil einer Webapplikation, in der sensible Daten behandelt werden, ebenso eignet sich in den gegebenen Anwendungsfällen eine Benutzerverwaltung besonders. Die Userwaltung ergibt daher folgende Vorteile:
 \begin{itemize} 
   \item \textbf{Unterstützung für den Benutzer/die Benutzerin} 
@@ -159,4 +159,14 @@ In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts
   \label{fig:configuration}
 \end{figure}
 \section{Anbindung der Versionsverwaltung für spezifische User-Unterstützung}
+\subsection{Allgemeines}
+Auf der Hauptseite der Webapplikation werden alle Fehler, Code Smells, Warnungen und Bugs gelistet, die die Tools der Statischen Code Analyse im Projekt finden und welche mit den Importer-Plugin in die Datenbank importiert werden. Diese Informationen werden alle in einer Tabelle angezeigt, welche nach Projekt, Klasse oder Datum sortiert und gefiltert werden kann. \\
+Das Problem bei dieser Implementierung ist die unspezifische Anzeige: Den Teammitgliedern werden alle Informationen angezeigt, auch Fehler, die von anderen Entwicklerinnen oder Entwicklern implementiert worden sind. So können  Fehler im Projekt gefunden werden und das Team kann die Fehler einsehen. Das Problem bei einer dauerhaften Verbesserung der Kenntnisse der Entwicklerinnen und Entwickler ist hierbei aber die unpersönliche Anzeige. Um den Usern der Webapplikation die genauen Fehler anzuzeigen wird Lösung mit der Anbindung eines VCS-Tools (Version Control System) implementiert. Das Konzept dabei ist es, das die angemeldeten User mit den VCS-Usern verbunden werden. So können die genauen Implementierungen untersucht werden.
+\subsubsection{Ablauf}
+Um die spezifische User Unterstützung benutzen zu können, muss im Projekt eine Versionsverwaltung verwendet werden (Im Rahmen dieser Arbeit wurde hierbei die Unterstützung für die Versionsverwaltung Git implementiert). Der Link des Repositories muss zusätzlich in der Projektkonfiguration von einem Teammitglied konfiguriert werden (siehe Abbildung 4.1). Um nun die Accounts der Teammitglieder in der Userverwaltung mit den Entwicklerinnen und Entwicklern des Projekts in der Versionsverwaltung verbinden zu können, wird die Email-Adresse verwendet. Das heißt, die Email-Adresse im Tool der Versionsverwaltung muss mit der Email-Adresse der Userverwaltung übereinstimmen. Werden nun in der Weboberfläche die Informationen zu der Statischen Code Analyse abgefragt, so werden die Informationen in der Datenbank mit den Daten der Versionsverwaltungs-API verglichen und es wird versucht eine Verbindung herzustellen. Es werden nur jene Fehler und Informationen abgefragt und angezeigt, die vom angemeldeten User implementiert und committed worden sind.   
+\subsubsection{Alternative Implementierungsmöglichkeiten}
+eingabe der klassen welcher wer implementiert hat; Tätigkeiten verteilen (ui, db, repos); authorname in den klassenkommentaren 
+\subsection{GithubAPI und Service}
+\subsection{Oberfläche}
+\section{Cron Jobs für regelmäßige Berichte}
 \chapterend
