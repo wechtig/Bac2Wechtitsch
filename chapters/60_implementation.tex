@@ -90,7 +90,7 @@ public UserDetails loadUserByUsername(String email)
 Die Passwort-Überprüfung und der Aufruf der Methode \textit{loadUserByUsername} wird hierbei von Spring selbst implementiert.  Dazu muss das Datenbank-Objekt \textit{User} zum Spring-Objekt \textit{UserDetails} gemappt und eine eigene Configuration-Klassen implementiert werden (siehe Listing \ref{lst:config}). Im Security-Service sind ebenso Berechtigungsüberprüfungen implementiert. Dazu müssen Rollen erstellt und den Benutzer zugewiesen werden. Diese Rollen bzw. Berechtigungen werden mithilfe der \textit{GrantedAuthority} gespeichert und ausgelesen.
 
 \lstset{
-  caption={Konfiguration für das Spring Security UserService.}, 
+  caption={Konfiguration für das Spring Security UserService. Das Service \textit{UserSecurityService} wird nun als das zentrale Service für die Useroperationen von Spring Security verwendet.}, 
   basicstyle=\small\ttfamily, 
   label=lst:config, 
   %float=tbhp, % float image to top/bottom/here/page
@@ -123,7 +123,7 @@ Werden hier andere Datenbanken oder Services implementiert, so muss nur die Impl
 \subsubsection{Security Konfigurationen}
 Um die Applikation (URLs der einzelnen Unterseiten) und die API schützen zu können, müssen nun weitere Konfigurationen hinzugefügt werden ~\parencite{springSecBook}. Dazu müssen die einzelnen URLs für die Anzeige der Daten gesichert werden, während hingegen die URLs für den Login und den Website-Aufruf frei zugänglich sein müssen. Auch die Logout-URL kann hier angegeben werden \ref{lst:configurls}.
 \lstset{
-  caption={Konfiguration für die Sicherheit der URLs.}, 
+  caption=[Konfiguration für die Sicherheit der URLs.]{Konfiguration für die Sicherheit der URLs. Die einzelnen Paths können entweder für alle freigegeben oder für eine bestimmte Gruppe angezeigt werden. Das Abmelden wird von Spring automatisch durchgeführt.}, 
   basicstyle=\small\ttfamily, 
   label=lst:configurls, 
   %float=tbhp, % float image to top/bottom/here/page
@@ -149,23 +149,29 @@ Um auf den Login reagieren zu können, wird ein \textit{AuthenticationSuccessHan
 \subsubsection{Controller und Oberfläche} 
 Im Gegensatz zu den anderen Teilen der Webapplikation ist der Login mit Thymeleaf erstellt worden, da so die Login-Überprüfung und das Handling einfach implementiert werden kann. Auch die Navigationsleiste ist mit Thymeleaf implementiert, um auch die Logout-Funktion einfach zu gestalten. Ebenso kann in der Navigationsleiste der angemeldete User eingesehen werden (siehe Abbildung \ref{fig:configuration}). Um Thymeleaf verwenden zu können, ist ein Controller implementiert, der zu den Thymeleaf-Seiten Get-Methoden mit einer \textit{ModelAndView} zur Verfügung stellt. Im \textit{ModelAndView} wird das Model (User) und die View (z.B. Thymeleaf-Login-Page) gespeichert. Als Get-Path wird der Pfad des Thymeleaf-Templates angegeben ~\parencite[Seite 160]{springSecBook}. In der Weboberfläche kann so einfach auf die Daten des Users, zum Beispiel Name und Rechte, zugegriffen werden.
 \subsection{Projektkonfiguration für Teammitglieder}
-In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts angezeigt und neue Teammitglieder hinzugefügt werden. Dazu muss der angemeldete Benutzer selbst Teil des Teams sein. Um eine neuen User zum Projekt hinzuzufügen muss die Email angegeben werden (siehe Abbildung \ref{fig:configuration}). Der eingeladene User kann daraufhin die Daten des Projekts (Fehler, Bugs, Errors, Charts, usw.) auf der Webseite einsehen. Auf der Konfigurationsseite kann auch eine Projektbeschreibung und ein Link für die Versionsverwaltung hinzugefügt werden (siehe Punkt TODO). 
+In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts angezeigt und neue Teammitglieder hinzugefügt werden. Dazu muss der angemeldete Benutzer selbst Teil des Teams sein. Um eine neuen User zum Projekt hinzuzufügen muss die Email angegeben werden (siehe Abbildung \ref{fig:configuration}). Der eingeladene User kann daraufhin die Daten des Projekts (Fehler, Bugs, Errors, Charts, usw.) auf der Webseite einsehen. Auf der Konfigurationsseite kann auch eine Projektbeschreibung und ein Link für die Versionsverwaltung hinzugefügt werden (siehe Punkt TODO). Dieser Link dient zur persönlichen Fehler- und Meldungsanzeige sowie zur Verlinkung zum Einsehen der Fehler. (siehe Punkt TODO)
 \begin{figure}[tp]
   \centering
   \includegraphics[height=6cm]{images/configuration.PNG}
   % The short caption should be capitalised
   % The full caption should hold a full sentence. 
- \caption[Konfiguration für das Projekt und Team]{Unterseite für verschiedene Konfigurationen für das Projekt und das Team.}
+ \caption[Konfiguration für das Projekt und Team]{Unterseite für verschiedene Konfigurationen für das Projekt und das Team. In diesem Beispiel ist der angemeldete User \textit{TestUser} Mitglied des Teams für das Projekt \textit{ChinookMovie}. So kann er neue Mitglieder zum Team hinzufügen.}
   \label{fig:configuration}
 \end{figure}
 \section{Anbindung der Versionsverwaltung für spezifische User-Unterstützung}
 \subsection{Allgemeines}
 Auf der Hauptseite der Webapplikation werden alle Fehler, Code Smells, Warnungen und Bugs gelistet, die die Tools der Statischen Code Analyse im Projekt finden und welche mit den Importer-Plugin in die Datenbank importiert werden. Diese Informationen werden alle in einer Tabelle angezeigt, welche nach Projekt, Klasse oder Datum sortiert und gefiltert werden kann. \\
-Das Problem bei dieser Implementierung ist die unspezifische Anzeige: Den Teammitgliedern werden alle Informationen angezeigt, auch Fehler, die von anderen Entwicklerinnen oder Entwicklern implementiert worden sind. So können  Fehler im Projekt gefunden werden und das Team kann die Fehler einsehen. Das Problem bei einer dauerhaften Verbesserung der Kenntnisse der Entwicklerinnen und Entwickler ist hierbei aber die unpersönliche Anzeige. Um den Usern der Webapplikation die genauen Fehler anzuzeigen wird Lösung mit der Anbindung eines VCS-Tools (Version Control System) implementiert. Das Konzept dabei ist es, das die angemeldeten User mit den VCS-Usern verbunden werden. So können die genauen Implementierungen untersucht werden.
+Das Problem bei dieser Implementierung ist die unspezifische Anzeige: Den Teammitgliedern werden alle Informationen angezeigt, auch Fehler, die von anderen Entwicklerinnen oder Entwicklern implementiert worden sind. So können  Fehler im Projekt gefunden werden und das Team kann die Fehler einsehen. Das Problem bei einer dauerhaften Verbesserung der Kenntnisse der Entwicklerinnen und Entwickler ist hierbei aber die unpersönliche Anzeige. Um den Usern der Webapplikation die genauen Fehler anzuzeigen wird Lösung mit der Anbindung eines VCS-Tools (Version Control System) implementiert. Das Konzept dabei ist es, das die angemeldeten User mit den VCS-Usern verbunden werden. So können die genauen Implementierungen untersucht werden. Dabei werden zum Beispiel die committeden Klassen aus den einzelnen gelesen.
 \subsubsection{Ablauf}
 Um die spezifische User Unterstützung benutzen zu können, muss im Projekt eine Versionsverwaltung verwendet werden (Im Rahmen dieser Arbeit wurde hierbei die Unterstützung für die Versionsverwaltung Git implementiert). Der Link des Repositories muss zusätzlich in der Projektkonfiguration von einem Teammitglied konfiguriert werden (siehe Abbildung 4.1). Um nun die Accounts der Teammitglieder in der Userverwaltung mit den Entwicklerinnen und Entwicklern des Projekts in der Versionsverwaltung verbinden zu können, wird die Email-Adresse verwendet. Das heißt, die Email-Adresse im Tool der Versionsverwaltung muss mit der Email-Adresse der Userverwaltung übereinstimmen. Werden nun in der Weboberfläche die Informationen zu der Statischen Code Analyse abgefragt, so werden die Informationen in der Datenbank mit den Daten der Versionsverwaltungs-API verglichen und es wird versucht eine Verbindung herzustellen. Es werden nur jene Fehler und Informationen abgefragt und angezeigt, die vom angemeldeten User implementiert und committed worden sind.   
 \subsubsection{Alternative Implementierungsmöglichkeiten}
-eingabe der klassen welcher wer implementiert hat; Tätigkeiten verteilen (ui, db, repos); authorname in den klassenkommentaren 
+Die beschriebene Methode mit der Einbeziehung eines Versionsverwaltungstools ist nur eine mögliche Methode zur persönlichen Anzeige. Ein Problem bei dieser Methode ist die verpflichtende Angabe eines VCS-Links. Andere Möglichkeiten, die diese Konfiguration nicht verlangen, sind unter anderem: \\
+\textbf{Angabe der entwickelnden Klassen und Methoden} \\
+Hierbei könnten die Entwicklerinnen und Entwickler die entwickelnden Methoden und Klassen in einer Übersichtsseite auswählen. Fehler, Bugs und andere Meldungen aus diesen Klassen werden den Usern angezeigt.\\
+\textbf{Automatische Erkennung durch Verteilung der Aufgaben} \\
+Die Idee bei dieser Methode ist eine Konfiguration, wo die Aufgaben verteilt werden: Die Benutzerinnen und Benutzer könnten hierbei jene Packages oder Module angeben, welche sie entwickeln. So können zum Beispiel die Aufgaben als Packages wie Repositories, Modules oder Weboberfläche verteilt werden. \\
+\textbf{Autorennamen verwenden} \\
+Bei dieser möglichen Lösung werden die Autorangaben der \textit{Javadoc} verwendet. Bei der \textit{Javadoc} zu Klassen werden unter anderem die Autoren angegeben \footnote{https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html}. Dieser Autorenname kann dazu verwendet werden, um den angemeldeten Usern die richtigen Meldungen anzuzeigen, wenn die beiden Namen übereinstimmen.
 \subsection{GithubAPI und Service}
 \subsection{Oberfläche}
 \section{Cron Jobs für regelmäßige Berichte}

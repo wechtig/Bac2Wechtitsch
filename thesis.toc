@@ -111,22 +111,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.4}Projektkonfiguration für Teammitglieder}{20}{subsection.4.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Anbindung der Versionsverwaltung für spezifische User-Unterstützung}{20}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Anbindung der Versionsverwaltung für spezifische User-Unterstützung}{21}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Allgemeines}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Allgemeines}{21}{subsection.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1.1}Ablauf}{21}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Ablauf}{22}{subsubsection.4.3.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.3.1.2}Alternative Implementierungsmöglichkeiten}{22}{subsubsection.4.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}GithubAPI und Service}{22}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}GithubAPI und Service}{23}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Oberfläche}{22}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Oberfläche}{23}{subsection.4.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Cron Jobs für regelmäßige Berichte}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Cron Jobs für regelmäßige Berichte}{23}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{23}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{24}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{24}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{25}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{26}{chapter*.7}%
+\contentsline {chapter}{Literatur}{27}{chapter*.7}%
