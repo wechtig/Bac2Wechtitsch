@@ -121,12 +121,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}GithubAPI und Service}{23}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Oberfläche}{23}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}HttpClient und API-Abfrage}{23}{subsubsection.4.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Cron Jobs für regelmäßige Berichte}{23}{section.4.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Verarbeitung des Response}{24}{subsubsection.4.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{24}{chapter.5}%
+\contentsline {subsection}{\numberline {4.3.3}Oberfläche}{24}{subsection.4.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{25}{chapter.6}%
+\contentsline {section}{\numberline {4.4}Cron Jobs für regelmäßige Berichte}{24}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{27}{chapter*.7}%
+\contentsline {chapter}{\numberline {5}Evaluation}{25}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{26}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{28}{chapter*.9}%

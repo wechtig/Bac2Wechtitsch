@@ -173,6 +173,86 @@ Die Idee bei dieser Methode ist eine Konfiguration, wo die Aufgaben verteilt wer
 \textbf{Autorennamen verwenden} \\
 Bei dieser möglichen Lösung werden die Autorangaben der \textit{Javadoc} verwendet. Bei der \textit{Javadoc} zu Klassen werden unter anderem die Autoren angegeben \footnote{https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html}. Dieser Autorenname kann dazu verwendet werden, um den angemeldeten Usern die richtigen Meldungen anzuzeigen, wenn die beiden Namen übereinstimmen.
 \subsection{GithubAPI und Service}
+Mit der GithubAPI können anderem die Commits eines Repositories abgefragt werden. Dazu müssen der User und der Name des Repositories bekannt sein. Um genauere Abfragen zu erstellen, wird auch ein Datumsbereich angegeben. Aus diesen Variablen wird ein Pfad erstellt, mit dem die Daten abgefragt werden (siehe 4.3.2.1). Der Pfad zum Repository muss in der Oberfläche für die Konfiguration angeben werden, die anderen Daten kann die Benutzerin oder der Benutzer bei der Abfrage auf der Weboberfläche auswählen. 
+\subsubsection{HttpClient und API-Abfrage}
+Der \textit{HttpClient} ist seit Java 11 ein Teil von Java \footnote{https://openjdk.java.net/groups/net/httpclient/intro.html}. Mit dem HttpClient können unter anderem Http-Daten abgefragt werden. Der \textit{HttpClient} wird in der Arbeit dazu verwendet, um die Daten der GithubAPI abzufragen. Dazu wird der Github-API-Pfad verwendet. Der \textit{HttpClient} benötigt zur Abfrage noch einen \textit{HttpRequest} um den Request abzuschicken und zu verarbeiten. Im \textit{HttpRequest} können Header-Variablen(User-Agent) und die Http-Methode(Bei der Github-Abfrage die Methode \textit{GET}) angegeben werden. Der Rückgabewert kann mit dem \textit{HttpResponse} bearbeitet werden (siehe Listing   \ref{lst:httprequest}).
+\lstset{
+  caption=[Listing für die Implementierung für die Abfrage der Github-API und Beispiel-Request.]{Listing für die Implementierung für die Abfrage der Github-API.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:httprequest, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+https://api.github.com/repos/wechtig
+/chinook/commits?since=2014-07-29&until=2020-07-28
+...
+HttpClient httpClient = HttpClient.newBuilder()
+     .version(HttpClient.Version.HTTP_1_1)
+     .connectTimeout(Duration.ofSeconds(20))
+     .build();
+
+public String get(String url)  {
+    HttpRequest request = HttpRequest.newBuilder()
+     .GET()
+     .uri(URI.create(url))
+     .setHeader("User-Agent", "Java 11 HttpClient Bot")
+     .build();
+    try {
+      HttpResponse<String> response = 
+      httpClient.send
+      	(request, HttpResponse.BodyHandlers.ofString());
+            return response.body();
+	...
+	\end{lstlisting}
+\end{samepage}
+\subsubsection{Verarbeitung des Response}
+Der \textit{HttpResponse} beinhaltet neben Informationen wie den Http-Status-Code, verschiedenen Headers und anderen Variablen einen Response-Body. Dieser Body kann als JSON gelesen und verwendet werden. Die JSON-Werte werden mit Java als \textit{Map} mit zwei \textit{String} gelesen. So kann der Variablenname und der Wert gelesen werden. Da sich im Response mehrere JSON-Werte befinden, muss zusätzlich eine Liste erstellt werden. Aus dem Response können nun die Autoren und die Commit-Links ausgelesen werden. Die einzelnen Änderungen können nur über die Commit-Links herausgefunden werden, daher muss ein zweiter Request abgeschickt werden. Aus dem Response des zweiten Commit-Requests lassen sich nun die geänderten Datein (filename) auslesen \ref{lst:lstresponse}. Dazu kann der \textit{ObjectMapper} verwendet werden.
+\lstset{
+  caption=[Auslesen der geänderten Files aus der Github-API.]{Auslesen der geänderten Files aus der Github-API. Die Links für die Commits müssen in einem eigenen Request vom Repository ausgelesen werden.}, 
+  basicstyle=\small\ttfamily, 
+  label=lst:lstresponse, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+...
+List<String> files = new ArrayList<>();
+for (String commit : commitLinks) {
+   String commitData = httpGithubClient.get(commit);
+   if(data == null) {
+       return new ArrayList<>();
+   }
+   try {
+     Map<String, List<Object>> commitResponse = new   
+      ObjectMapper().readValue(commitData, Map.class);
+     List<Object> changedFiles = 
+      commitResponse.get("files");
+
+     if(changedFiles == null) {
+      continue;
+     }
+
+     for(Object o : changedFiles)  {
+      String filename = 
+        (String) ((LinkedHashMap) o).get("filename");
+      files.add(filename);
+     }
+...     
+	\end{lstlisting}
+\end{samepage}
 \subsection{Oberfläche}
 \section{Cron Jobs für regelmäßige Berichte}
 \chapterend
