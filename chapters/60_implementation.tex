@@ -213,7 +213,7 @@ public String get(String url)  {
 	\end{lstlisting}
 \end{samepage}
 \subsubsection{Verarbeitung des Response}
-Der \textit{HttpResponse} beinhaltet neben Informationen wie den Http-Status-Code, verschiedenen Headers und anderen Variablen einen Response-Body. Dieser Body kann als JSON gelesen und verwendet werden. Die JSON-Werte werden mit Java als \textit{Map} mit zwei \textit{String} gelesen. So kann der Variablenname und der Wert gelesen werden. Da sich im Response mehrere JSON-Werte befinden, muss zusätzlich eine Liste erstellt werden. Aus dem Response können nun die Autoren und die Commit-Links ausgelesen werden. Die einzelnen Änderungen können nur über die Commit-Links herausgefunden werden, daher muss ein zweiter Request abgeschickt werden. Aus dem Response des zweiten Commit-Requests lassen sich nun die geänderten Datein (filename) auslesen \ref{lst:lstresponse}. Dazu kann der \textit{ObjectMapper} verwendet werden.
+Der \textit{HttpResponse} beinhaltet neben Informationen wie den Http-Status-Code, verschiedenen Headers und anderen Variablen einen Response-Body. Dieser Body kann als JSON gelesen und verwendet werden. Die JSON-Werte werden mit Java als \textit{Map} mit zwei \textit{String} gelesen. So kann der Variablenname und der Wert gelesen werden. Da sich im Response mehrere JSON-Werte befinden, muss zusätzlich eine Liste erstellt werden. Aus dem Response können nun die Autoren und die Commit-Links ausgelesen werden. Es werden nur jene Commits in der Liste gespeichert, wo der Autor mit dem angemeldeten Benutzer übereinstimmt. Commits von anderen Entwicklerinnen oder Entwickler werden nicht gespeichert, da sie nicht in der persönlichen Fehler- und Buganzeige auftauchen sollen. Die einzelnen Änderungen können nur über die Commit-Links herausgefunden werden, daher muss ein zweiter Request abgeschickt werden. Aus dem Response des zweiten Commit-Requests lassen sich nun die geänderten Datein (filename) auslesen \ref{lst:lstresponse}. Dazu kann der \textit{ObjectMapper} verwendet werden.
 \lstset{
   caption=[Auslesen der geänderten Files aus der Github-API.]{Auslesen der geänderten Files aus der Github-API. Die Links für die Commits müssen in einem eigenen Request vom Repository ausgelesen werden.}, 
   basicstyle=\small\ttfamily, 
@@ -253,6 +253,10 @@ for (String commit : commitLinks) {
 ...     
 	\end{lstlisting}
 \end{samepage}
+Nachdem die geänderten Dateien ausgelesen worden sind, werden aus der Datenbank die Fehlerinformationen und Warnung für die Datei gelesen. Bei der Datenabfrage wird auch der Datumsbereich verwendet, um genauere Anzeigen zu bekommen.
+\subsection{Fehlende Informationen über die geänderten Zeilen}
+Ein Problem bei der Unterstützung der GithubAPI, ist die fehlende Information über die genauen geänderten Zeilen. Denn mit der GithubAPI ist es nur möglich, die geänderten Dateien auszulesen, nicht aber genaue die geänderten Zeilen. So ist es möglich, das ein anderes Teammitglied den Fehler bereits früher in die Klasse eingebaut hat. Wenn die Klasse beim Commit geändert wird, so wird auch dieser Fehler angezeigt. Wenn aber eine Entwicklerin oder ein Entwickler Änderungen an einer Klasse vorgenommen hat und Fehler übersehen oder nicht die Kenntnisse über den Fehler hat, so ist es auch ein möglicher Vorteil für das Teammitglied, wenn der Fehler in der Übersicht angezeigt wird. 
+
 \subsection{Oberfläche}
 \section{Cron Jobs für regelmäßige Berichte}
 \chapterend
