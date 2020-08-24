@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  23 AUG 2020 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  24 AUG 2020 20:24
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1189,7 +1189,7 @@ LaTeX Info: Redefining \nameref on input line 53.
 \openout2 = `chapters/01_titlepage.aux'.
 
  (chapters/01_titlepage.tex
-<images/logo_FHJ_100mm_cmyk.pdf, id=90, 285.065pt x 58.2175pt>
+<images/logo_FHJ_100mm_cmyk.pdf, id=94, 285.065pt x 58.2175pt>
 File: images/logo_FHJ_100mm_cmyk.pdf Graphic file (type pdf)
 <use images/logo_FHJ_100mm_cmyk.pdf>
 Package pdftex.def Info: images/logo_FHJ_100mm_cmyk.pdf  used on input line 12.
@@ -1385,7 +1385,7 @@ Kapitel 3.
 
 
 ]
-<images/infrastruktur.PNG, id=246, 528.47438pt x 283.0575pt>
+<images/infrastruktur.PNG, id=253, 528.47438pt x 283.0575pt>
 File: images/infrastruktur.PNG Graphic file (type png)
 <use images/infrastruktur.PNG>
 Package pdftex.def Info: images/infrastruktur.PNG  used on input line 24.
@@ -1463,7 +1463,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
  [18] [19]
-<images/configuration.PNG, id=358, 646.66594pt x 285.31593pt>
+<images/configuration.PNG, id=365, 646.66594pt x 285.31593pt>
 File: images/configuration.PNG Graphic file (type png)
 <use images/configuration.PNG>
 Package pdftex.def Info: images/configuration.PNG  used on input line 155.
@@ -1477,12 +1477,27 @@ Overfull \hbox (0.4118pt too wide) in paragraph at lines 216--257
 ne-ben In-for-ma-tio-nen wie den Http-Status-Code, ver-schie-
  []
 
-[24] [25])
+[24]
+<images/markedFindings.PNG, id=455, 770.12718pt x 279.29344pt>
+File: images/markedFindings.PNG Graphic file (type png)
+<use images/markedFindings.PNG>
+Package pdftex.def Info: images/markedFindings.PNG  used on input line 263.
+(pdftex.def)             Requested size: 392.28961pt x 142.26378pt.
+
+
+LaTeX Warning: Citation 'cintirScheduler' on page 25 undefined on input line 27
+1.
+
+
+LaTeX Warning: Citation 'eriksson2011comparison' on page 25 undefined on input 
+line 271.
+
+[25 <./images/markedFindings.PNG>] [26] [27])
 \openout2 = `chapters/80_evaluation.aux'.
 
  (chapters/80_evaluation.tex
 Kapitel 5.
-[26
+[28
 
 
 
@@ -1492,7 +1507,7 @@ Kapitel 5.
 
  (chapters/90_conclusion.tex
 Kapitel 6.
-[27
+[29
 
 
 
@@ -1510,7 +1525,7 @@ Overfull \hbox (42.70993pt too wide) in paragraph at lines 113--113
 s .
  []
 
-[28
+[30
 
 
 
@@ -1520,7 +1535,7 @@ Overfull \hbox (41.38197pt too wide) in paragraph at lines 113--113
 shared -[] understanding -[]
  []
 
-[29]
+[31]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (thesis.aux (chapters/01_titlepage.aux) (chapters/02_declaration.aux)
@@ -1531,23 +1546,28 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B5589BF7797A4E7C5B2E78B7AA2F0701;1574.
+(rerunfilecheck)             Checksum: 56D7F6004B59D72A6B1DC9DE1519CCBB;1634.
 
 
 LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30191 strings out of 480900
- 541513 string characters out of 2917036
- 1315334 words of memory out of 3000000
- 45207 multiletter control sequences out of 15000+200000
+ 30206 strings out of 480900
+ 541791 string characters out of 2917036
+ 1315468 words of memory out of 3000000
+ 45214 multiletter control sequences out of 15000+200000
  598884 words of font info for 114 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 73i,8n,68p,1235b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,8n,68p,2083b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1569,9 +1589,9 @@ courier/ucrro8a.pfb><D:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/MikTex/f
 onts/type1/urw/times/utmb8a.pfb><D:/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:
 /MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (36 pages, 277387 bytes).
+Output written on thesis.pdf (38 pages, 304518 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 214 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
