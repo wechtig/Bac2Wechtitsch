@@ -290,6 +290,36 @@
       \field{title}{Defining and Measuring Maintainability}
       \field{year}{2011}
     \endentry
+    \entry{cintirScheduler}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b1a30ae34f57c16320d49a65fbe4ad8a}{%
+           family={Cintir},
+           familyi={C\bibinitperiod},
+           given={Guray},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \strng{fullhash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \strng{bibnamehash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \strng{authorbibnamehash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \strng{authornamehash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \strng{authorfullhash}{b1a30ae34f57c16320d49a65fbe4ad8a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Task Scheduling in Spring Boot}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://medium.com/@guraycintir/task-scheduling-in-spring-boot-e70a1069a9f
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@guraycintir/task-scheduling-in-spring-boot-e70a1069a9f
+      \endverb
+    \endentry
     \entry{cohn2003introducing}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d33712bcde2d63bad054a832b61d01e8}{%
@@ -409,6 +439,39 @@
       \field{pages}{89\bibrangedash 96}
       \range{pages}{8}
     \endentry
+    \entry{eriksson2011comparison}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=93ca6b87c6e60858e38b686da16b08f3}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={Malin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa8e3ff2fb421909afe0f7962e6b65a2}{%
+           family={Hallberg},
+           familyi={H\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1e3f66876c107d510a1b666d91837ede}
+      \strng{fullhash}{1e3f66876c107d510a1b666d91837ede}
+      \strng{bibnamehash}{1e3f66876c107d510a1b666d91837ede}
+      \strng{authorbibnamehash}{1e3f66876c107d510a1b666d91837ede}
+      \strng{authornamehash}{1e3f66876c107d510a1b666d91837ede}
+      \strng{authorfullhash}{1e3f66876c107d510a1b666d91837ede}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The School of Computer Science and Engineering Royal Institute of Technology}
+      \field{title}{Comparison between JSON and YAML for data serialization}
+      \field{year}{2011}
+      \field{pages}{1\bibrangedash 25}
+      \range{pages}{25}
+    \endentry
     \entry{fowler2018refactoring}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=312ac886938a9b2be4f8eb607567fe4c}{%
@@ -462,6 +525,33 @@
       \verb{url}
       \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249#:~:text=Unter%20Teamkultur%20versteht%20man%20die,entwickelt%2C%20verstetigt%20und%20mitunter%20verfestigt.
       \endverb
+    \endentry
+    \entry{harold2013javamail}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d481f81914c4047f313748bfa1638d81}{%
+           family={Harold},
+           familyi={H\bibinitperiod},
+           given={Elliotte\bibnamedelima Rusty},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d481f81914c4047f313748bfa1638d81}
+      \strng{fullhash}{d481f81914c4047f313748bfa1638d81}
+      \strng{bibnamehash}{d481f81914c4047f313748bfa1638d81}
+      \strng{authorbibnamehash}{d481f81914c4047f313748bfa1638d81}
+      \strng{authornamehash}{d481f81914c4047f313748bfa1638d81}
+      \strng{authorfullhash}{d481f81914c4047f313748bfa1638d81}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JavaMail API: Sending and Receiving Email with Java}
+      \field{year}{2013}
     \endentry
     \entry{mantyla2008types}{article}{}
       \name{author}{2}{}{%

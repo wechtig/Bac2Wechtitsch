@@ -2203,6 +2203,7 @@
     <bcf:citekey order="17">springSecBook</bcf:citekey>
     <bcf:citekey order="18">cintirScheduler</bcf:citekey>
     <bcf:citekey order="19">eriksson2011comparison</bcf:citekey>
+    <bcf:citekey order="20">harold2013javamail</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
