@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  26 AUG 2020 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  29 AUG 2020 17:14
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1189,7 +1189,7 @@ LaTeX Info: Redefining \nameref on input line 53.
 \openout2 = `chapters/01_titlepage.aux'.
 
  (chapters/01_titlepage.tex
-<images/logo_FHJ_100mm_cmyk.pdf, id=94, 285.065pt x 58.2175pt>
+<images/logo_FHJ_100mm_cmyk.pdf, id=98, 285.065pt x 58.2175pt>
 File: images/logo_FHJ_100mm_cmyk.pdf Graphic file (type pdf)
 <use images/logo_FHJ_100mm_cmyk.pdf>
 Package pdftex.def Info: images/logo_FHJ_100mm_cmyk.pdf  used on input line 12.
@@ -1385,7 +1385,7 @@ Kapitel 3.
 
 
 ]
-<images/infrastruktur.PNG, id=253, 528.47438pt x 283.0575pt>
+<images/infrastruktur.PNG, id=260, 528.47438pt x 283.0575pt>
 File: images/infrastruktur.PNG Graphic file (type png)
 <use images/infrastruktur.PNG>
 Package pdftex.def Info: images/infrastruktur.PNG  used on input line 24.
@@ -1443,7 +1443,7 @@ rst wenn die Email-Adresse
  []
 
 [17]
-Overfull \hbox (185.8282pt too wide) in paragraph at lines 47--47
+Overfull \hbox (185.8282pt too wide) in paragraph at lines 49--49
 [][][]\T1/ptm/m/n/10 https://docs.spring.io/spring-security/site/docs/4.2.15.RE
 LEASE/apidocs/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.
 html| 
@@ -1452,44 +1452,60 @@ html|
 (D:\MikTex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 64
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 66
 .
 
 (D:\MikTex\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
- [18] [19]
-<images/configuration.PNG, id=365, 646.66594pt x 285.31593pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
+ [18] [19] [20]
+<images/configuration.PNG, id=384, 646.66594pt x 285.31593pt>
 File: images/configuration.PNG Graphic file (type png)
 <use images/configuration.PNG>
-Package pdftex.def Info: images/configuration.PNG  used on input line 155.
+Package pdftex.def Info: images/configuration.PNG  used on input line 157.
 (pdftex.def)             Requested size: 386.92702pt x 170.71652pt.
- [20] [21 <./images/configuration.PNG>] [22]
+ [21 <./images/configuration.PNG>] [22]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 193.
- [23]
-Overfull \hbox (0.4118pt too wide) in paragraph at lines 216--257
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 195.
+
+Overfull \hbox (0.4118pt too wide) in paragraph at lines 218--259
 \T1/ptm/m/n/12 Der \T1/ptm/m/it/12 Htt-pRe-spon-se \T1/ptm/m/n/12 bein-hal-tet 
 ne-ben In-for-ma-tio-nen wie den Http-Status-Code, ver-schie-
  []
 
-[24]
-<images/markedFindings.PNG, id=455, 770.12718pt x 279.29344pt>
+[23] [24] [25]
+<images/markedFindings.PNG, id=467, 770.12718pt x 279.29344pt>
 File: images/markedFindings.PNG Graphic file (type png)
 <use images/markedFindings.PNG>
-Package pdftex.def Info: images/markedFindings.PNG  used on input line 263.
+Package pdftex.def Info: images/markedFindings.PNG  used on input line 265.
 (pdftex.def)             Requested size: 392.28961pt x 142.26378pt.
- [25 <./images/markedFindings.PNG>] [26] [27] [28])
+ [26 <./images/markedFindings.PNG>] [27] [28]
+<images/table.PNG, id=495, 788.9475pt x 241.65282pt>
+File: images/table.PNG Graphic file (type png)
+<use images/table.PNG>
+Package pdftex.def Info: images/table.PNG  used on input line 287.
+(pdftex.def)             Requested size: 464.4758pt x 142.26378pt.
+
+Overfull \hbox (51.91083pt too wide) in paragraph at lines 287--290
+ [][] 
+ []
+
+
+Overfull \hbox (7.02377pt too wide) in paragraph at lines 284--293
+\T1/ptm/m/n/12 Um ein Kom-men-tar spei-chern zu kön-nen, muss in der Über-sicht
+sta-bel-le das Kommentar-
+ []
+
+[29 <./images/table.PNG>] [30])
 \openout2 = `chapters/80_evaluation.aux'.
 
-
-(chapters/80_evaluation.tex
+ (chapters/80_evaluation.tex
 Kapitel 5.
-[29
+[31
 
 
 
@@ -1499,7 +1515,7 @@ Kapitel 5.
 
  (chapters/90_conclusion.tex
 Kapitel 6.
-[30
+[32
 
 
 
@@ -1517,7 +1533,7 @@ Overfull \hbox (42.70993pt too wide) in paragraph at lines 113--113
 s .
  []
 
-[31
+[33
 
 
 
@@ -1527,7 +1543,7 @@ Overfull \hbox (41.38197pt too wide) in paragraph at lines 113--113
 shared -[] understanding -[]
  []
 
-[32]
+[34]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (thesis.aux (chapters/01_titlepage.aux) (chapters/02_declaration.aux)
@@ -1537,34 +1553,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 (chapters/90_conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 070BEF368D8D664F7243114FFD5657B9;1704.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 56D7F6004B59D72A6B1DC9DE1519CCBB;1634
-(rerunfilecheck)             After:  070BEF368D8D664F7243114FFD5657B9;1704.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30234 strings out of 480900
- 542462 string characters out of 2917036
- 1315641 words of memory out of 3000000
- 45235 multiletter control sequences out of 15000+200000
+ 30246 strings out of 480900
+ 542650 string characters out of 2917036
+ 1382758 words of memory out of 3000000
+ 45242 multiletter control sequences out of 15000+200000
  598884 words of font info for 114 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  73i,8n,68p,2260b,2102s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1589,9 +1592,9 @@ courier/ucrro8a.pfb><D:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/MikTex/f
 onts/type1/urw/times/utmb8a.pfb><D:/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:
 /MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (39 pages, 310780 bytes).
+Output written on thesis.pdf (41 pages, 333585 bytes).
 PDF statistics:
- 620 PDF objects out of 1000 (max. 8388607)
- 228 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 233 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

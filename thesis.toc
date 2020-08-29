@@ -99,17 +99,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.2.2}Berechtigung zur Datenanzeige}{17}{subsubsection.4.2.2.2}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.2.3}Administrator und initialer Zugriff}{18}{subsubsection.4.2.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.3}Implementierung des Usermanagements mit Spring Security}{18}{subsection.4.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.3.1}Allgemein}{18}{subsubsection.4.2.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.3.2}Security Service}{18}{subsubsection.4.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3.3}Security Konfigurationen}{19}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Security Konfigurationen}{20}{subsubsection.4.2.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.3.4}Controller und Oberfläche}{20}{subsubsection.4.2.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Projektkonfiguration für Teammitglieder}{20}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.4}Projektkonfiguration für Teammitglieder}{21}{subsection.4.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Anbindung der Versionsverwaltung für spezifische User-Unterstützung}{21}{section.4.3}%
 \defcounter {refsection}{0}\relax 
@@ -123,30 +125,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.3.2.1}HttpClient und API-Abfrage}{23}{subsubsection.4.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2.2}Verarbeitung des Response}{24}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Verarbeitung des Response}{25}{subsubsection.4.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Fehlende Informationen über die geänderten Zeilen}{25}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Fehlende Informationen über die geänderten Zeilen}{26}{subsection.4.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Oberfläche}{25}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}Oberfläche}{26}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Cron Job und Report Sender für Berichte}{26}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Cron Job und Report Sender für Berichte}{27}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Automatische Berichte}{26}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Automatische Berichte}{27}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Manuelle Berichte}{26}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Manuelle Berichte}{27}{subsection.4.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Versenden der Reports mit Java Mail}{27}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.3}Versenden der Reports mit Java Mail}{28}{subsection.4.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3.1}Implementierung und Konfiguration}{27}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Implementierung und Konfiguration}{28}{subsubsection.4.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Kommentare}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Kommentare}{28}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Allgemeines und Vergleich zu Pull Requests}{27}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}Allgemeines und Vergleich zu Pull Requests}{28}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Android Applikation}{28}{section.4.6}%
+\contentsline {subsection}{\numberline {4.5.2}Implementierung}{29}{subsection.4.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{29}{chapter.5}%
+\contentsline {section}{\numberline {4.6}Android Applikation}{30}{section.4.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{30}{chapter.6}%
+\contentsline {chapter}{\numberline {5}Evaluation}{31}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{32}{chapter*.9}%
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{32}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{34}{chapter*.9}%
