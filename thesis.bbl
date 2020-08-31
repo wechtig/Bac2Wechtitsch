@@ -289,6 +289,12 @@
       \field{labeltitlesource}{title}
       \field{title}{Defining and Measuring Maintainability}
       \field{year}{2011}
+      \verb{urlraw}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.2027
+      \endverb
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.50.2027
+      \endverb
     \endentry
     \entry{cintirScheduler}{article}{}
       \name{author}{1}{}{%
@@ -520,10 +526,10 @@
       \field{title}{Leitfaden für eine gute Teamkultur}
       \field{year}{2017}
       \verb{urlraw}
-      \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249#:~:text=Unter%20Teamkultur%20versteht%20man%20die,entwickelt%2C%20verstetigt%20und%20mitunter%20verfestigt.
+      \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249
       \endverb
       \verb{url}
-      \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249#:~:text=Unter%20Teamkultur%20versteht%20man%20die,entwickelt%2C%20verstetigt%20und%20mitunter%20verfestigt.
+      \verb https://www.kulturmanagement.net/Themen/Zusammen-wirken-Leitfaden-fuer-gute-Teamkultur-und-Zusammenarbeit,2249
       \endverb
     \endentry
     \entry{harold2013javamail}{book}{}
@@ -536,7 +542,7 @@
            givenun=0}}%
       }
       \list{publisher}{1}{%
-        {" O'Reilly Media, Inc."}%
+        {OReilly Media, Inc.}%
       }
       \strng{namehash}{d481f81914c4047f313748bfa1638d81}
       \strng{fullhash}{d481f81914c4047f313748bfa1638d81}
@@ -590,6 +596,33 @@
       \field{year}{2008}
       \field{pages}{430\bibrangedash 448}
       \range{pages}{19}
+    \endentry
+    \entry{ratabouil2015android}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bcedd6e13b04be1e9bece4e30244454}{%
+           family={Ratabouil},
+           familyi={R\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{5bcedd6e13b04be1e9bece4e30244454}
+      \strng{fullhash}{5bcedd6e13b04be1e9bece4e30244454}
+      \strng{bibnamehash}{5bcedd6e13b04be1e9bece4e30244454}
+      \strng{authorbibnamehash}{5bcedd6e13b04be1e9bece4e30244454}
+      \strng{authornamehash}{5bcedd6e13b04be1e9bece4e30244454}
+      \strng{authorfullhash}{5bcedd6e13b04be1e9bece4e30244454}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Android NDK: beginner's guide}
+      \field{year}{2015}
     \endentry
     \entry{springSecBook}{book}{}
       \name{author}{1}{}{%
