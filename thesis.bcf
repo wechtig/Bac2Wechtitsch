@@ -2205,6 +2205,9 @@
     <bcf:citekey order="19">cintirScheduler</bcf:citekey>
     <bcf:citekey order="20">eriksson2011comparison</bcf:citekey>
     <bcf:citekey order="21">harold2013javamail</bcf:citekey>
+    <bcf:citekey order="22">liu2017web</bcf:citekey>
+    <bcf:citekey order="23">mednieks2012programming</bcf:citekey>
+    <bcf:citekey order="24">vogelIntent</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

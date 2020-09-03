@@ -559,6 +559,36 @@
       \field{title}{JavaMail API: Sending and Receiving Email with Java}
       \field{year}{2013}
     \endentry
+    \entry{liu2017web}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0ea5a24c6d6674722b1df408fbd41d19}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Baoqin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \strng{fullhash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \strng{bibnamehash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \strng{authorbibnamehash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \strng{authornamehash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \strng{authorfullhash}{0ea5a24c6d6674722b1df408fbd41d19}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Intelligent and Interactive Systems and Applications}
+      \field{title}{Web information transfer between android client and server}
+      \field{year}{2017}
+      \field{pages}{435\bibrangedash 441}
+      \range{pages}{7}
+    \endentry
     \entry{mantyla2008types}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=066074a6c08721748caa849dddd96986}{%
@@ -596,6 +626,51 @@
       \field{year}{2008}
       \field{pages}{430\bibrangedash 448}
       \range{pages}{19}
+    \endentry
+    \entry{mednieks2012programming}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=638a603f41c21496c3f52ef72f1c4003}{%
+           family={Mednieks},
+           familyi={M\bibinitperiod},
+           given={Zigurd\bibnamedelima R},
+           giveni={Z\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d89bfda0aa391cf2ed5509761c32ad99}{%
+           family={Dornin},
+           familyi={D\bibinitperiod},
+           given={Laird},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9ec505c57f7aceaa2a4f6325bd0f5bd}{%
+           family={Meike},
+           familyi={M\bibinitperiod},
+           given={G\bibnamedelima Blake},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cae800c1bf41f072273e072dc701abad}{%
+           family={Nakamura},
+           familyi={N\bibinitperiod},
+           given={Masumi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{69b9e316990892a36b832cdfbd8351e4}
+      \strng{fullhash}{d950d0a82381a12cd744e7eb52ec1ecb}
+      \strng{bibnamehash}{d950d0a82381a12cd744e7eb52ec1ecb}
+      \strng{authorbibnamehash}{d950d0a82381a12cd744e7eb52ec1ecb}
+      \strng{authornamehash}{69b9e316990892a36b832cdfbd8351e4}
+      \strng{authorfullhash}{d950d0a82381a12cd744e7eb52ec1ecb}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Programming android}
+      \field{year}{2012}
     \endentry
     \entry{ratabouil2015android}{book}{}
       \name{author}{1}{}{%
