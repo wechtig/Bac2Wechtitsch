@@ -1,13 +1,53 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evaluation}
-\label{chap:evaluation}
+\label{Evaluierung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
+\section{Vergleiche der neuen Features mit anderen Lösungen}
+Dieser Vergleich setzt den Vergleich mit herkömmlichen Lösungen aus dem ersten Teil dieser Arbeit fort (Code Qualität und der Einsatz der Statischen Code Analyse für weitere Auswertungen und Präsentationen der Daten, Punkt 5.1):
 
-Your text here\ldots
-Describe (proof) how your implementation really solved the stated problem. I.e. accept or reject your hypotheses. Collect data, process data and interpret the data.
-Include an interpretation of the work. What do the results mean to us?
-State current limitations of your solution.
-Give (personal) interpretation where suitable. Your own opinion is relevant, but must be marked clearly as such.
+\begin{itemize} 
+\item Neue Benutzerinnen oder Benutzer können zum Projekt und damit zum Team hinzugefügt werden. Diese können von Administratoren hinzugefügt werden. Andere Lösungen wie integrierte Lösungen in Entwicklungsumgebungen oder Lösungen in der CI-Pipeline unterstützen diese Teamfunktionalität nicht. Hingegen unterstützen Produkte wie Veracode \footnote{https://help.veracode.com/reader/RXjxbTR2MDQdN3gX4l53CQ/RI1a2OsFNYfLuMX2t9BEOg} oder SonarQube\footnote{https://docs.sonarqube.org/latest/instance-administration/security/} dieses Funktionalität.
+\item Produkte wie SonarQube unterstützen auch eine genaue Rollenverwaltung für spezielle Funktionen in der Applikation. Diese ist in dieser Arbeit hingegen nicht implementiert.
+\item Durch die Github-Anbindung können für einzelne Benutzerinnen oder Benutzer die persönlichen Fehler angezeigt werden. Andere Lösungen unterstützen diese Funktionalität nicht. SonarQube und Veracode unterstützen aber eine Github-Anbindung, mit der beispielsweise die Pull Request und damit der neue Code gezielt untersucht werden können.
+\item Mit dem Report-Tool kann nun an das Team oder an andere Personen automatisch ein generierter Report mit den wichtigsten Informationen gesendet werden. Reports können auch von integrierten Tools für Entwicklungsumgebungen erstellt, aber nicht automatisch versendet werden.
+\item Mit der Kommentar-Funktion können Kommentare zu den einzelnen Meldungen erfasst und vom ganzen Team eingesehen werden. Diese Funktionalität wird auch von SonarQube, aber nicht von Veracode oder integrierten Lösungen unterstützt.
+\item Mit der mobilen Android-Lösungen können die wichtigsten Informationen einfach und schnell vom Team gesehen werden. Eine solche Möglichkeit wird von keiner anderen Lösung unterstützt.
+\end{itemize}
 
+\section{Evaluierung der Applikationen anhand von Testpersonen}
+Die Kriterien, die in Punkt 1.2.2 beschrieben werden, werden von Testpersonen mit den Noten 1-5 bewertet. Ebenso werden die Anmerkungen von den Testpersonen festgehalten. Die Testpersonen arbeiten dazu zusammen mit der Applikation. Für die Testpersonen wird ein eigenes Team erstellt. Im Testablauf wird neuer fehlerhafter Code committed, danach der Fehler angezeigt und ausgebessert. Auch soll der Fehler in der mobilen Applikation angezeigt werden. Zum Fehler werden auch Kommentare erstellt, die von den anderen Teammitgliedern eingesehen werden können.
+\subsection{Testpersonen}
+Für die Evaluierung wurden aus Testpersonen zwei Teams gebildet.
+\subsubsection{Evaluierung durch das erste Team}
+Das \textit{Team 1} bestand aus drei Testpersonen. \\
+\textbf{Einfachheit} \\
+Testperson 1: 1, Code schon in der UI anzeigen, nicht über die Navigation \\
+Testperson 2: 3, Standard-Daten schon anzeigen, zum Beispiel Filterung der Meldung des letzten Commits \\
+Testperson 3: 2, Längere Erklärungen und Informationen bei den einzelnen Unterseiten und Funktionen \\
+\textbf{Übersicht} \\
+Testperson 1: 1 \\
+Testperson 2: 2 \\
+Testperson 3: 2, Unterseiten auch für Charts und Bilder \\
+\textbf{Unterstützung} \\
+Testperson 1: 1 \\
+Testperson 2: 2 \\
+Testperson 3: 1, Unterseiten auch für Charts und Bilder \\
+\textbf{Individualität} \\
+Testperson 1: 1 \\
+Testperson 2: 3, Anbindung auch an andere VCS-Tools, Bereitstellung einer API um andere Tools einfach zu unterstützen \\
+Testperson 3: 2, Cron-Job Zeiten sollen in der Weboberfläche selber zum Einrichten sein\\
+\textbf{Performance} \\
+Testperson 1: 1 \\
+Testperson 2: 1 \\
+Testperson 3: 1 \\
+\textbf{Verständlichkeit} \\
+Testperson 1: 1 \\
+Testperson 2: 2, Information über Shake-Funktion in der Android-Applikation anzeigen \\
+Testperson 3: 2, Mehr Erklärungen zu den einzelnen Charts (auch in der Android-Applikation) \\
+\textbf{Unterstützung für das Team} \\
+Testperson 1: 2, Bereitstellen eines Filters für Meldungen mit Kommentaren \\
+Testperson 2: 1, Anbinden eines Kanban-Boards für Verfolgen des Fortschritts der Fehlerausbesserung \\
+Testperson 3: 1 \\
+\subsubsection{Team 2}
 \chapterend

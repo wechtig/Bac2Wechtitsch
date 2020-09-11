@@ -239,6 +239,30 @@
       \field{title}{Führung und Zusammenarbeit in verteilten Teams}
       \field{year}{2017}
     \endentry
+    \entry{borckanalyse}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e85cb54321cfb1ce230af0b193afbdc0}{%
+           family={Borck},
+           familyi={B\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \strng{fullhash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \strng{bibnamehash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \strng{authorbibnamehash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \strng{authornamehash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \strng{authorfullhash}{e85cb54321cfb1ce230af0b193afbdc0}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analyse und Verwendungsm{ö}glichkeiten von Smartphone-Sensoren am Beispiel des Samsung Galaxy S3}
+      \field{year}{2013}
+    \endentry
     \entry{teamculture}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=a604673f093a79ca1032994138d63973}{%
@@ -363,6 +387,61 @@
       \field{year}{2003}
       \field{pages}{74\bibrangedash 78}
       \range{pages}{5}
+    \endentry
+    \entry{curtis1979measuring}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=337c3d2c35ad83a175b2e62a08be4753}{%
+           family={Curtis},
+           familyi={C\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10f97561ae86fc68bbaa56f41fea259e}{%
+           family={Sheppard},
+           familyi={S\bibinitperiod},
+           given={Sylvia\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26958a11fd31f0171ac2d8bcde739b50}{%
+           family={Milliman},
+           familyi={M\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64746018ad0c218d75a7d5af38318313}{%
+           family={Borst},
+           familyi={B\bibinitperiod},
+           given={MA},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5ab955e310bd8966f6f02e55213d8ae}{%
+           family={Love},
+           familyi={L\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7223fb150018179321cb82abaaaa4f9e}
+      \strng{fullhash}{14b3ed228dae5023562d7d8ac19432cf}
+      \strng{bibnamehash}{14b3ed228dae5023562d7d8ac19432cf}
+      \strng{authorbibnamehash}{14b3ed228dae5023562d7d8ac19432cf}
+      \strng{authornamehash}{7223fb150018179321cb82abaaaa4f9e}
+      \strng{authorfullhash}{14b3ed228dae5023562d7d8ac19432cf}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on software engineering}
+      \field{number}{2}
+      \field{title}{Measuring the psychological complexity of software maintenance tasks with the Halstead and McCabe metrics}
+      \field{year}{1979}
+      \field{pages}{96\bibrangedash 104}
+      \range{pages}{9}
     \endentry
     \entry{searchmetrics}{online}{}
       \name{author}{1}{}{%
@@ -556,8 +635,63 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{9781449367206}
       \field{title}{JavaMail API: Sending and Receiving Email with Java}
       \field{year}{2013}
+    \endentry
+    \entry{khanambarriers}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0dbac3eee107bb5840bbe0ad42b8d5d2}{%
+           family={Khanam},
+           familyi={K\bibinitperiod},
+           given={Zeba},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \strng{fullhash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \strng{bibnamehash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \strng{authorbibnamehash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \strng{authornamehash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \strng{authorfullhash}{0dbac3eee107bb5840bbe0ad42b8d5d2}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Barriers to Refactoring: Issues and Solutions}
+      \field{year}{2018}
+    \endentry
+    \entry{kukrejaMaintainability}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b7903092460895cd4265b4fcba9767f1}{%
+           family={Kukreja},
+           familyi={K\bibinitperiod},
+           given={Nupul},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b7903092460895cd4265b4fcba9767f1}
+      \strng{fullhash}{b7903092460895cd4265b4fcba9767f1}
+      \strng{bibnamehash}{b7903092460895cd4265b4fcba9767f1}
+      \strng{authorbibnamehash}{b7903092460895cd4265b4fcba9767f1}
+      \strng{authornamehash}{b7903092460895cd4265b4fcba9767f1}
+      \strng{authorfullhash}{b7903092460895cd4265b4fcba9767f1}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measuring Software Maintainability}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://quandarypeak.com/2015/02/measuring-software-maintainability/
+      \endverb
+      \verb{url}
+      \verb https://quandarypeak.com/2015/02/measuring-software-maintainability/
+      \endverb
     \endentry
     \entry{liu2017web}{inproceedings}{}
       \name{author}{1}{}{%
@@ -669,6 +803,7 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-1449389697}
       \field{title}{Programming android}
       \field{year}{2012}
     \endentry
@@ -696,6 +831,7 @@
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{9781283453547}
       \field{title}{Android NDK: beginner's guide}
       \field{year}{2015}
     \endentry
@@ -726,6 +862,54 @@
       \field{title}{Spring Boot 2}
       \field{year}{2018}
     \endentry
+    \entry{sutherland2007distributed}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6e3f26f6f816a26c6ab36bc7a899bcde}{%
+           family={Sutherland},
+           familyi={S\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9152d560bfcd4b2380a65bb955dfb477}{%
+           family={Viktorov},
+           familyi={V\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6908c7f34c49d3531f8caa81de57338}{%
+           family={Blount},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=851a305ee0912bc41085b69afc5f4d7b}{%
+           family={Puntikov},
+           familyi={P\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7c4dca232b01581f2b7d70f04072fbcb}
+      \strng{fullhash}{ff9a08642d3e1ad54aa183d2c4fe8ef0}
+      \strng{bibnamehash}{ff9a08642d3e1ad54aa183d2c4fe8ef0}
+      \strng{authorbibnamehash}{ff9a08642d3e1ad54aa183d2c4fe8ef0}
+      \strng{authornamehash}{7c4dca232b01581f2b7d70f04072fbcb}
+      \strng{authorfullhash}{ff9a08642d3e1ad54aa183d2c4fe8ef0}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2007 40th annual Hawaii international conference on system sciences (HICSS'07)}
+      \field{title}{Distributed scrum: Agile project management with outsourced development teams}
+      \field{year}{2007}
+      \field{pages}{274a\bibrangedash 274a}
+      \range{pages}{-1}
+    \endentry
     \entry{verwijsTeams}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cbde1a78122103efc577ff5ab9a6dd25}{%
@@ -752,6 +936,60 @@
       \verb{url}
       \verb https://medium.com/the-liberators/teams-and-a-shared-understanding-of-code-quality-the-11-rules-of-quality-f4ab7e07304
       \endverb
+    \endentry
+    \entry{vogelIntent}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f4613620d7a837540a63918891f1b7e3}{%
+           family={Vogel},
+           familyi={V\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f4613620d7a837540a63918891f1b7e3}
+      \strng{fullhash}{f4613620d7a837540a63918891f1b7e3}
+      \strng{bibnamehash}{f4613620d7a837540a63918891f1b7e3}
+      \strng{authorbibnamehash}{f4613620d7a837540a63918891f1b7e3}
+      \strng{authornamehash}{f4613620d7a837540a63918891f1b7e3}
+      \strng{authorfullhash}{f4613620d7a837540a63918891f1b7e3}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Android Intents}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.vogella.com/tutorials/AndroidIntent/article.html
+      \endverb
+      \verb{url}
+      \verb https://www.vogella.com/tutorials/AndroidIntent/article.html
+      \endverb
+    \endentry
+    \entry{wechtitschCodeQuality}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=edfd7b4e533d2d0e85353e763a376509}{%
+           family={Wechtitsch},
+           familyi={W\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{edfd7b4e533d2d0e85353e763a376509}
+      \strng{fullhash}{edfd7b4e533d2d0e85353e763a376509}
+      \strng{bibnamehash}{edfd7b4e533d2d0e85353e763a376509}
+      \strng{authorbibnamehash}{edfd7b4e533d2d0e85353e763a376509}
+      \strng{authornamehash}{edfd7b4e533d2d0e85353e763a376509}
+      \strng{authorfullhash}{edfd7b4e533d2d0e85353e763a376509}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Code Qualität und der Einsatz der Statischen Code Analyse für weitere Auswertungen und Präsentationen der Daten}
+      \field{year}{2020}
     \endentry
   \enddatalist
 \endrefsection

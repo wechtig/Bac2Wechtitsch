@@ -36,11 +36,11 @@ Eigene Entwicklungsteams werden mithilfe einer Benutzerverwaltung erstellt. Dazu
 \end{itemize}
 
 \subsection{Allgemeiner Aufbau} 
-\subsubsection{User Flow}
+\textbf{User Flow}
 Die Benutzerin oder der Benutzer sehen beim Aufrufen der Website, automatisch den Login. Ohne einer richtigen Anmeldung, kann man nicht auf die API oder die Webanwendung zugreifen. Der Benutzerin, der Benutzer muss sich vorher mit einer Email-Adresse und einem Passwort registrieren. Wenn eine Abmeldung nicht manuell erfolgt, so wird der User automatisch abgemeldet.
-\subsubsection{Berechtigung zur Datenanzeige}
+\textbf{Berechtigung zur Datenanzeige}
 Um auf Projekt-Inhalte zugreifen zu können, muss ein Projektmitglied die Email-Adresse des neuen Teammitglieds zum Projekt hinzufügen. Erst wenn die Email-Adresse für das Projekt hinterlegt ist, werden die Fehler und Bugs des Projekts angezeigt. Eine andere Möglichkeit dieses Sicherheitsmechanismus wäre eine Anfrage der Entwicklerin oder des Entwicklers an das Team, welches dann die Email-Adresse akzeptieren oder ablehnen kann. So können keine unberechtigten Personen auf sensible Daten zugreifen. Eine Hierarchie-Regelung bzw. verschiedene Berechtigungsstufen sind nicht implementiert, da das Projektteam als Scrum-Team angesehen wird und im Scrum-Prozess alle Mitglieder gleichberechtigt sind \ref{scrumprozess}. Jedes Teammitglied kann daher ein neues Teammitglied mit der Email-Adresse hinzufügen.
-\subsubsection{Administrator und initialer Zugriff}
+\textbf{Administrator und initialer Zugriff}
 Werden mit dem Datenbank-Importer-Plugin die Ergebnisse der Statischen Code Analyse eines bestimmten Projekts zum ersten Mal in die Datenbank geladen, so wird eine initiale Projektkonfiguration angelegt. Als erstes Mitglied wird automatisch ein Administrator gewählt. Dieser Administrator kann dann die ersten Teammitglieder, zum Beispiel die Projektleiterin oder den Projektleiter, in das Team einladen. So wurde das Problem gelöst, dass User zu Projekten nur eingeladen, aber nicht beitreten können. Ohne diese Implementierung kann aber kein User einen anderen User einladen, da zuerst kein User Mitglied des Teams ist. Die Mail-Adresse dieses Administrators muss im Plugin angegeben werden. Bei wiederholten Importen aus dem gleichen Projekt in die Datenbank, wird keine neue Konfiguration mehr erstellt.
 
 \subsection{Implementierung des Usermanagements mit Spring Security}
@@ -93,7 +93,7 @@ public UserDetails loadUserByUsername(String email)
 Die Passwort-Überprüfung und der Aufruf der Methode \textit{loadUserByUsername} wird hierbei von Spring selbst implementiert.  Dazu muss das Datenbank-Objekt \textit{User} zum Spring-Objekt \textit{UserDetails} gemappt und eine eigene Configuration-Klassen implementiert werden (siehe Listing \ref{lst:config}). Im Security-Service sind ebenso Berechtigungsüberprüfungen implementiert. Dazu müssen Rollen erstellt und den Benutzer zugewiesen werden. Diese Rollen bzw. Berechtigungen werden mithilfe der \textit{GrantedAuthority} gespeichert und ausgelesen.
 
 \lstset{
-  caption={Konfiguration für das Spring Security UserService. Das Service \textit{UserSecurityService} wird nun als das zentrale Service für die Useroperationen von Spring Security verwendet.}, 
+  caption=[Konfiguration für das Spring Security UserService]{Konfiguration für das Spring Security UserService. Das Service \textit{UserSecurityService} wird nun als das zentrale Service für die Useroperationen von Spring Security verwendet.}, 
   basicstyle=\small\ttfamily, 
   label=lst:config, 
   %float=tbhp, % float image to top/bottom/here/page
@@ -152,7 +152,7 @@ Um auf den Login reagieren zu können, wird ein \textit{AuthenticationSuccessHan
 \subsubsection{Controller und Oberfläche} 
 Im Gegensatz zu den anderen Teilen der Webapplikation ist der Login mit Thymeleaf erstellt worden, da so die Login-Überprüfung und das Handling einfach implementiert werden kann. Auch die Navigationsleiste ist mit Thymeleaf implementiert, um auch die Logout-Funktion einfach zu gestalten. Ebenso kann in der Navigationsleiste der angemeldete User eingesehen werden (siehe Abbildung \ref{fig:configuration}). Um Thymeleaf verwenden zu können, ist ein Controller implementiert, der zu den Thymeleaf-Seiten Get-Methoden mit einer \textit{ModelAndView} zur Verfügung stellt. Im \textit{ModelAndView} wird das Model (User) und die View (z.B. Thymeleaf-Login-Page) gespeichert. Als Get-Path wird der Pfad des Thymeleaf-Templates angegeben ~\parencite[Seite 160]{springSecBook}. In der Weboberfläche kann so einfach auf die Daten des Users, zum Beispiel Name und Rechte, zugegriffen werden.
 \subsection{Projektkonfiguration für Teammitglieder}
-In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts angezeigt und neue Teammitglieder hinzugefügt werden. Dazu muss der angemeldete Benutzer selbst Teil des Teams sein. Um eine neuen User zum Projekt hinzuzufügen muss die Email angegeben werden (siehe Abbildung \ref{fig:configuration}). Der eingeladene User kann daraufhin die Daten des Projekts (Fehler, Bugs, Errors, Charts, usw.) auf der Webseite einsehen. Auf der Konfigurationsseite kann auch eine Projektbeschreibung und ein Link für die Versionsverwaltung hinzugefügt werden (siehe Punkt TODO). Dieser Link dient zur persönlichen Fehler- und Meldungsanzeige sowie zur Verlinkung zum Einsehen der Fehler. (siehe Punkt TODO). Die Konfigurationen für jedes Projekt werden in einer eigenen MongoDB-Collection \textit{configurations} gespeichert. Dieser Eintrag wird initial ohne Konfigurationen beim ersten Import mit dem Importer-Plugin  erstellt.
+In der Unterseite \textit{Configuration} können die Teammitglieder des Projekts angezeigt und neue Teammitglieder hinzugefügt werden. Dazu muss der angemeldete Benutzer selbst Teil des Teams sein. Um eine neuen User zum Projekt hinzuzufügen muss die Email angegeben werden (siehe Abbildung \ref{fig:configuration}). Der eingeladene User kann daraufhin die Daten des Projekts (Fehler, Bugs, Errors, Charts, usw.) auf der Webseite einsehen. Auf der Konfigurationsseite kann auch eine Projektbeschreibung und ein Link für die Versionsverwaltung hinzugefügt werden (siehe Punkt 4.3). Dieser Link dient zur persönlichen Fehler- und Meldungsanzeige sowie zur Verlinkung zum Einsehen der Fehler. (siehe Abbildung 4.4). Die Konfigurationen für jedes Projekt werden in einer eigenen MongoDB-Collection \textit{configurations} gespeichert. Dieser Eintrag wird initial ohne Konfigurationen beim ersten Import mit dem Importer-Plugin  erstellt.
 \begin{figure}[tp]
   \centering
   \includegraphics[height=6cm]{images/configuration.PNG}
@@ -260,7 +260,7 @@ Nachdem die geänderten Dateien ausgelesen worden sind, werden aus der Datenbank
 \subsection{Fehlende Informationen über die geänderten Zeilen}
 Ein Problem bei der Unterstützung der GithubAPI, ist die fehlende Information über die genauen geänderten Zeilen. Denn mit der GithubAPI ist es nur möglich, die geänderten Dateien auszulesen, nicht aber genaue die geänderten Zeilen. So ist es möglich, das ein anderes Teammitglied den Fehler bereits früher in die Klasse eingebaut hat. Wenn die Klasse beim Commit geändert wird, so wird auch dieser Fehler angezeigt. Wenn aber eine Entwicklerin oder ein Entwickler Änderungen an einer Klasse vorgenommen hat und Fehler übersehen oder nicht die Kenntnisse über den Fehler hat, so ist es auch ein möglicher Vorteil für das Teammitglied, wenn der Fehler in der Übersicht angezeigt wird. 
 \subsection{Oberfläche}
-Die Oberfläche für die persönliche Fehler und Warnungsanzeige des Users ist identisch mit der allgemeinen Übersichtsansicht. Zusätzlich wurde aber eine Github-Verlinkung für die Fehler in der Tabelle eingebaut. Dieser Link wurde auf die Anzeige der betreffenden Zeilennummer gesetzt (TODO siehe Abbildung Kommentare). Über diesen Link kann der Code in der Online-Versionsverwaltung eingesehen werden. Der Link wird hierbei aus dem Link für das Repository in der Konfiguration, aus dem Filenamen und den Zeilennummern erstellt. Dadurch, dass im Link die Zeilennummern hinzugefügt werden, kann die genaue Zeile angezeigt werden. Auch Fehler, die sich über mehrere Zeilen strecken, werden markiert (siehe Abbildung \ref{fig:markedFindings}). 
+Die Oberfläche für die persönliche Fehler und Warnungsanzeige des Users ist identisch mit der allgemeinen Übersichtsansicht. Zusätzlich wurde aber eine Github-Verlinkung für die Fehler in der Tabelle eingebaut. Dieser Link wurde auf die Anzeige der betreffenden Zeilennummer gesetzt (siehe Abbildung 4.3). Über diesen Link kann der Code in der Online-Versionsverwaltung eingesehen werden. Der Link wird hierbei aus dem Link für das Repository in der Konfiguration, aus dem Filenamen und den Zeilennummern erstellt. Dadurch, dass im Link die Zeilennummern hinzugefügt werden, kann die genaue Zeile angezeigt werden. Auch Fehler, die sich über mehrere Zeilen strecken, werden markiert (siehe Abbildung \ref{fig:markedFindings}). 
 \begin{figure}[tp]
   \centering
   \includegraphics[height=5cm]{images/markedFindings.PNG}
@@ -279,6 +279,7 @@ Der PDF-Report wird aus den Daten mit iText-PDF generiert (siehe Bacherlorarbeit
 \subsubsection{Implementierung und Konfiguration} 
 Aus den Daten und Reports wird mit JavaMail eine \textit{MimeMessage} generiert. Bei einer \textit{MimeMessage} können Informationen wie Empfänger, Anhang, Text und Betreff angegeben werden ~\parencite{harold2013javamail}. Da eine PDF an die Mail angehängt wird, muss auch ein \textit{MimePart} angegeben werden, indem der Datentyp PDF definert wird. Um eine \textit{MimeMessage} aber erstellen zu können, wird eine Session benötigt. Die Session kann ein Mail-Server sein, über diese Session wird also die Nachricht übermittelt. Da für die Arbeit kein eigener Mail-Server zur Verfügung stand, wurde ein einfacher Mail-Account angegeben. Die Mails werden dann über diesen Mail-Account gesendet. Für den Mail-Account muss eine Email-Adresse und das Passwort angegeben werden. Viele Mail-Programme blockieren aber initial eine solche Versendung der Mails, dies kann aber aktiviert werden. Nachdem die Session erstellt wurde, müssen noch Einstellung wie SMTP-Host, Port und andere Informationen angegeben werden. SMTP ist das Protokoll das verwendet werden muss, um die Emails versenden zu können. Als SMTP-Host wurde also bei der Arbeit der Gmail-Host verwendet (smtp.gmail.com). Der Gmail-Host kann aber nur verwendet werden, wenn gewisse Security-Einstellungen am Email-Account vorgenommen werden.Beim Einsatz der Applikation, beispielsweise in einem Unternehmen, kann der SMTP-Server durch einen eigenen internen SMTP-Server ersetzt werden.
 \section{Kommentare}
+Die Kommentare, die zu den einzelnen Meldungen erfasst werden können, sollen die Interaktion der Teammitglieder vereinfachen.
 \subsection{Allgemeines und Vergleich zu Pull Requests}
 \begin{figure}[tp]
   \centering
@@ -300,7 +301,7 @@ Um ein Kommentar speichern zu können, muss in der Übersichtstabelle das Kommen
   \label{fig:popup}
 \end{figure}
 Ein Kommentar, das daher zu einer bestimmten Meldung erfasst wird, soll aber auch für die selben anderen Meldungen gelten, welche bei wiederholten Importen gespeichert werden. Daher wird beim Auslesen der Kommentare aus der Datenbank nicht eine bestimmte Identifikationsnummer benutzt, sondern die Attribute die das Kommentar bestimmen (Projekt, Klasse, Meldung, Zeile). So wird bei allen gleichen Meldungen der Kommentar angezeigt.
-\section{Mobile Android Applikation}
+\section{Android Applikation}
 \subsection{Allgemeines und Idee}
 Die Android Applikation soll eine neue Möglichkeit sein, um die Code Qualität zu steigern. Die wichtigsten Informationen aus der Webapplikation sollen hierbei kompakt angezeigt werden: Die einzelnen Meldungen und die verschiedenen Charts. Die Möglichkeit zur Filterung nach Projekt und Zeitbereich soll auch hierbei verfügbar sein. Die Applikation wurde mit Java entwickelt. \\ Die Applikation verwendet keinen direkten Zugriff auf die Datenbank. So konnte unter anderem doppelter Code vermieden werden, da Services und Repositorys nicht für beiden Applikationen entwickelt werden . Die mobile Applikation bezieht die Daten aus der API der Webapplikation. Dazu werden mit verschieden Attributen HTTP-Requests abgeschickt. Die HTTP-Parameter die benötigt werden um die Daten aus der Datenbank abzufragen, kann die Benutzerin oder Benutzer beim Start der Applikation auswählen. Die Webapplikation wiederum liest die Daten mithilfe der Services und des MongoDB Java Drivers aus der Datenbank aus. Der Aufbau der Applikation beinhaltet Java-Packages für die Datenhaltungsklassen und die Business-Logik wie HTTP-Tasks, sowie auch die Aktivitäten (siehe Abbildung 4.5).
 
@@ -320,18 +321,6 @@ In der Applikation soll ebenso ein neuer Aspekt oder eine neue Funktion implemen
 Um die Informationen verwendet zu können, wird ein Request verwendet. Der Request wird als HTTP-Get-Funktion implementiert. Mit den Informationen zu Projekt und Datumsbereich wird die URL erstellt. Mit einer \textit{HttpURLConnection} wird der Request abgeschickt ~\parencite{liu2017web}. Auch andere Http-Funktionen werden von der Klasse \textit{HttpURLConnection} unterstützt, daher muss die HTTP-Methode \textit{Get} aber auch andere Optionen wie das \textit{Timeout} angegeben werden. Der Request wird daraufhin vom Controller in der Webapplikation verarbeitet und eine Response enthält die Charts und Informationen. Ist der Response-Code der Wert 200 (OK), so wird der Response mit einem \textit{BufferedReader} und einem \textit{InputSream} gelesen. Die Daten werden an die Aktivität als JSON-Wert zurückgegeben. Um die Daten aus dem JSON-Result verwenden zu können wurde noch ein \textit{JSONArray} benutzt, von dem die verschiedenen \textit{JSONObjects} ausgelesen und zu Java-Objekten umgewandelt wurden. 
 \subsection{Aktivitäten und Navigation}
 Eine \textit{Activity} wird für einen bestimmte Anzeige, also zum Beispiel ein Formular oder ein Bildschirm, erstellt ~\parencite{mednieks2012programming}. Diese Aktivitäten werden im Android Manifest registriert. Ebenso kann zu den Aktivitäten eine Layout-Klasse erstellt werden. Diese Layout-Klasse wird in der \textit{Activity} registriert. Zwischen den einzelnen Aktivitäten soll der Benutzer wechseln können, entweder manuell oder automatisch. In der Applikation gibt es vier Aktivitäten (siehe Abbildung 4.6):
-\subsubsection{SplashActivity}
-Die SplashActivity wird zuerst initial ausgeführt. Dies kann im Android-Manifest mit der Option \textit{android.intent.category.LAUNCHER} festgelegt werden. Während des Startvorgangs wird ein \textit{SplashScreen} kurz angezeigt. Der Benutzer wird danach automatisch zur nächsten Aktivität weitergeleitet. Dieser Startbildschirm dient zur Information und zum Erstellen der Applikation und andere Ladevorgänge. \\ Während des \textit{SplashScreen} wird der erste Request erstellt: Hierbei werden von der Webapplikation die Projektdaten geladen. Mittels eines Intents wird die nächste Aktivität \textit{ProjectActivity} danach automatisch gestartet und die Projektdaten werden weitergegeben. Ein Intent ist eine klare Funktion oder Aufgabe in der Android-Applikation, zum Beispiel der Start einer anderen Aktivität ~\parencite{vogelIntent}.
-\subsubsection{ProjectActivity}
-In der \textit{ProjectActivity} werden die Projektdaten aus dem Intent ausgelesen. Die Projektnamen werden im dazugehörigen Layout in einer \textit{SelectBox} angezeigt. Ebenso gibt es im Projekt-Layout zwei Date-Picker, mit dem der Datumsbereich der Abfrage festgelegt werden kann. Nachdem die Benutzerin oder der Benutzer einen Datumsbereich und ein Projekt ausgewählt hat, wird die eingegebenen Daten in der Aktivität gespeichert. Nachdem die Benutzerin oder der Benutzer alle Daten eingegeben hat, wird automatisch die nächste Aktivität aufgerufen. Die ausgewählten Parameter Projektname und Datumsbereich werden wieder in einem Intent gespeichert und die nächste Aktivität wird automatisch aufgerufen.
-\subsubsection{MainActivity}
-Die \textit{MainActivity} ist die zentrale Aktivität der Applikation. Im Layout zur \textit{MainActivity} werden die Meldungen, Bugs und Fehler angezeigt. \\ Bevor die Aktivität angezeigt wird, werden die Parameter aus dem Intent gelesen. Mit diesen Parametern wird ein Request durchgeführt und die Meldungen werden im Backend der Webapplikation aus der Datenbank ausgelesen und zurückgegeben. Der Response wird in der mobilen Applikation zu einer Liste von Meldungen konvertiert. Aufgrund der Größe des Textes der Fehlermeldungen werden die Informationen nicht in einer gemeinsamen Liste oder auf einen Bildschirm angezeigt, sondern einzeln. Durch zwei Buttons im Footer kann die Benutzerin oder der Benutzer  nach vor oder zurück in der Liste navigieren und die Fehler genau einsehen. Dabei wird auch die Klasse und die Zeilennummer der Meldung angezeigt. Wird das mobile Geräte bei dieser Aktivität geschüttelt, so wird eine zufällige Meldung angezeigt (siehe Punkt 4.6.4). Ebenso gibt es im Footer ein Image-Icon, das die Möglichkeit bereitstellt, die generierten Charts, erstellt aus den Meldungen, anzuzeigen (siehe Bac 2 TODO). Wird diese Option ausgewählt, wird die Aktivität gewechselt, und die \textit{ImageActivity} aufgerufen.
-\subsubsection{ImageActivity}
-In der \textit{ImageActivity} werden die Parameter zunächst wieder ausgelesen. Mit den Parametern wird ein Request geschickt und die Charts von der Webapplikation geladen. Die Bilder werden in einer \textit{ImageView} im Layout angezeigt. Auch hierbei besteht wieder die Möglichkeit zwischen den Bildern zu navigieren. Ebenso wird auch ein zufälliges Charts angezeigt, wenn das mobile Gerät geschüttelt wird. Im Footer des Layouts zur \textit{ImageActivity} gibt es wieder die Option, zur \textit{MainActivity} zu wechseln. \\
-\textbf{Fehlende Generierung der Charts am Backend} \\
-Ein Problem bei dieser Lösung ist, das die Charts nicht im Backend der Webapplikation oder in der Android-Applikation generiert werden können (siehe Punkt 4.4.3). Daher können nur jene Charts von der mobilen Applikation angezeigt werden, welche bereits in der Webapplikation vom Frontend generiert worden sind. Eine Lösung, die dieses Problem beheben könnte, ist die Verwendung einer anderen Art der Erstellung und Speicherung der Charts. So könnten diese zum Beispiel mit einer Library wie der \textit{Google Chart API}\footnote{https://developers.google.com/chart/?csw=1} oder \textit{JFreeChart}\footnote{http://www.jfree.org/jfreechart/} am Backend generiert, gespeichert und nach Bedarf an die Android-Applikation übermittelt werden.
-\subsection{Shake-Funktion}
-
 \begin{figure}[tp]
   \centering
   \includegraphics[height=8cm]{images/seqAct.PNG}
@@ -340,6 +329,108 @@ Ein Problem bei dieser Lösung ist, das die Charts nicht im Backend der Webappli
  \caption[Sequenzdiagramm für die Interaktion der verschiedenen Activities untereinander und mit der Webapplikation.]{Sequenzdiagramm für die Interaktion der verschiedenen Activities untereinander und mit der Webapplikation (Controller).}
   \label{fig:popup}
 \end{figure}
+\subsubsection{SplashActivity}
+Die SplashActivity wird zuerst initial ausgeführt. Dies kann im Android-Manifest mit der Option \textit{android.intent.category.LAUNCHER} festgelegt werden. Während des Startvorgangs wird ein \textit{SplashScreen} kurz angezeigt. Der Benutzer wird danach automatisch zur nächsten Aktivität weitergeleitet. Dieser Startbildschirm dient zur Information und zum Erstellen der Applikation und andere Ladevorgänge. \\ Während des \textit{SplashScreen} wird der erste Request erstellt: Hierbei werden von der Webapplikation die Projektdaten geladen. Mittels eines Intents wird die nächste Aktivität \textit{ProjectActivity} danach automatisch gestartet und die Projektdaten werden weitergegeben. Ein Intent ist eine klare Funktion oder Aufgabe in der Android-Applikation, zum Beispiel der Start einer anderen Aktivität ~\parencite{vogelIntent}.
+\lstset{
+  caption=[Starten einer neuen Aktivität.]{Listing für die Erstellung eines neuen Intents, für den Wechsel der \textit{Activity} zur \textit{ProjectActivity}. Im Intent werden die geladenen Projektnamen hinzugefügt und in der neuen \textit{Activity} ausgelesen.},
+  basicstyle=\small\ttfamily, 
+  label=lst:config, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
 
+% listing with some settings, such as float, for this listing only
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+...
+Intent intent = new Intent
+   (SplashActivity.this, ProjectActivity.class);
+ArrayList<String> projects = 
+   new ArrayList<>(Arrays.asList(projectsArray));
+intent.putStringArrayListExtra("Projects", projects);
+startActivity(intent);
+...  
+
+	\end{lstlisting}
+\end{samepage}
+\subsubsection{ProjectActivity}
+In der \textit{ProjectActivity} werden die Projektdaten aus dem Intent ausgelesen. Die Projektnamen werden im dazugehörigen Layout in einer \textit{SelectBox} angezeigt. Ebenso gibt es im Projekt-Layout zwei Date-Picker, mit dem der Datumsbereich der Abfrage festgelegt werden kann. Nachdem die Benutzerin oder der Benutzer einen Datumsbereich und ein Projekt ausgewählt hat, wird die eingegebenen Daten in der Aktivität gespeichert. Nachdem die Benutzerin oder der Benutzer alle Daten eingegeben hat, wird automatisch die nächste Aktivität aufgerufen. Die ausgewählten Parameter Projektname und Datumsbereich werden wieder in einem Intent gespeichert und die nächste Aktivität wird automatisch aufgerufen.
+\begin{figure}[tp]
+  \centering
+  \includegraphics[height=8cm]{images/anroidProjectScreen.PNG}
+  % The short caption should be capitalised
+  % The full caption should hold a full sentence. 
+ \caption[Layout für die Auswahl des Zeitbereichs und des Projekts]{Layout für die Auswahl des Zeitbereichs und des Projekts. Die Datumswerte werden über einen DatePicker eingegeben. Sobald alle Informationen eingegeben worden sind, wird die nächste \textit{Activity} aufgerufen.}
+  \label{fig:findingsInIDE}
+\end{figure}
+\subsubsection{MainActivity}
+Die \textit{MainActivity} ist die zentrale Aktivität der Applikation. Im Layout zur \textit{MainActivity} werden die Meldungen, Bugs und Fehler angezeigt. \\ Bevor die Aktivität angezeigt wird, werden die Parameter aus dem Intent gelesen. Mit diesen Parametern wird ein Request durchgeführt und die Meldungen werden im Backend der Webapplikation aus der Datenbank ausgelesen und zurückgegeben. Der Response wird in der mobilen Applikation zu einer Liste von Meldungen konvertiert. Aufgrund der Größe des Textes der Fehlermeldungen werden die Informationen nicht in einer gemeinsamen Liste oder auf einen Bildschirm angezeigt, sondern einzeln. Durch zwei Buttons im Footer kann die Benutzerin oder der Benutzer  nach vor oder zurück in der Liste navigieren und die Fehler genau einsehen. Dabei wird auch die Klasse und die Zeilennummer der Meldung angezeigt. Wird das mobile Geräte bei dieser Aktivität geschüttelt, so wird eine zufällige Meldung angezeigt (siehe Punkt 4.6.4). Ebenso gibt es im Footer ein Image-Icon, das die Möglichkeit bereitstellt, die generierten Charts, erstellt aus den Meldungen, anzuzeigen (siehe Bac 2 TODO). Wird diese Option ausgewählt, wird die Aktivität gewechselt, und die \textit{ImageActivity} aufgerufen.
+\begin{figure}[tp]
+  \centering
+  \includegraphics[height=8cm]{images/androidFindingScreen.PNG}
+  % The short caption should be capitalised
+  % The full caption should hold a full sentence. 
+ \caption[Layout für die Anzeige der Meldungen.]{Layout für die Anzeige der Meldungen.}
+  \label{fig:findingsInIDE}
+\end{figure}
+\subsubsection{ImageActivity}
+In der \textit{ImageActivity} werden die Parameter zunächst wieder ausgelesen. Mit den Parametern wird ein Request geschickt und die Charts von der Webapplikation geladen. Die Bilder werden in einer \textit{ImageView} im Layout angezeigt (siehe Abbildung 4.7). Auch hierbei besteht wieder die Möglichkeit zwischen den Bildern zu navigieren. Ebenso wird auch ein zufälliges Charts angezeigt, wenn das mobile Gerät geschüttelt wird. Im Footer des Layouts zur \textit{ImageActivity} gibt es wieder die Option, zur \textit{MainActivity} zu wechseln. Die Charts können in der Oberfläche auf vergrößert werden, um Details einsehen zu können.  \\
+\textbf{Fehlende Generierung der Charts am Backend} \\
+Ein Problem bei dieser Lösung ist, das die Charts nicht im Backend der Webapplikation oder in der Android-Applikation generiert werden können (siehe Punkt 4.4.3). Daher können nur jene Charts von der mobilen Applikation angezeigt werden, welche bereits in der Webapplikation vom Frontend generiert worden sind. Eine Lösung, die dieses Problem beheben könnte, ist die Verwendung einer anderen Art der Erstellung und Speicherung der Charts. So könnten diese zum Beispiel mit einer Library wie der \textit{Google Chart API}\footnote{https://developers.google.com/chart/?csw=1} oder \textit{JFreeChart}\footnote{http://www.jfree.org/jfreechart/} am Backend generiert, gespeichert und nach Bedarf an die Android-Applikation übermittelt werden.
+\begin{figure}[tp]
+  \centering
+  \includegraphics[height=8cm]{images/androidChart.PNG}
+  % The short caption should be capitalised
+  % The full caption should hold a full sentence. 
+ \caption[Layout für die Anzeige der generierten Charts]{.Layout für die Anzeige der generierten Charts}
+  \label{fig:findingsInIDE}
+\end{figure}
+\subsection{Shake-Funktion}
+Mit der Shake-Funktion soll ein neuer spielerischer Aspekt in die Applikation eingebaut werden. Diese Funktion soll Benutzerinnen und Benutzer, die Verwendung der Applikation vereinfachen und die Erfahrung verbessern. Aber auch andere spielerische Funktionen können noch in die Applikation eingebaut werden (siehe Punkt 6). \\
+Mit der Shake-Funktion sollen zufällige Meldungen und Charts beim Schütteln der Applikation angezeigt werden. Dies funktioniert mit einem eigenen Sensor ~\parencite{borckanalyse}: Der \textit{SensorEventListener } kann dazu verwendet, um herauszufinden ob sich das mobile Gerät bewegt hat. Wird das Gerät bewegt, wird ein \textit{SensorEvent} ausgelöst \footnote{https://developer.android.com/reference/android/hardware/SensorEvent}. 
+\lstset{
+  caption=[Listing für die Implementierung des SensorEventListener.]{Listing für die Implementierung des SensorEventListener. Reagiert der Sensor auf eine Bewegung, wird das Event ausgelöst. Mit der Berechnung der \textit{Acceleration} wird festgestellt, ob sich das mobile Gerät schnell genug bewegt hat und so ob die Shake-Funktion bewusst ausgeführt werden soll. Sonst würde das Event auch bei kleinsten Bewegungen reagieren. Ist die Beschleunigung schnell genug, so wird eine zufällige Meldung geladen.},
+  basicstyle=\small\ttfamily, 
+  label=lst:config, 
+  %float=tbhp, % float image to top/bottom/here/page
+  language=Java,
+  frame=single,
+  breaklines=true, % break long source code lines, and add arrow
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  %  basewidth={0.55em}, 
+  % fontadjust}  % adjust these for more appealing appearance
+}
+
+% listing with some settings, such as float, for this listing only
+\begin{samepage}% with samepage we keep a FLOATing listing on one page
+	\begin{lstlisting}[float=tbhp]
+...
+private final SensorEventListener 
+    sensorListener = new SensorEventListener() {
+     @Override
+     public void onSensorChanged(SensorEvent event) {
+       float x = event.values[0];
+       float y = event.values[1];
+       float z = event.values[2];
+       lastAcceleration = currentAcceleration;
+       currentAcceleration = 
+            (float) Math.sqrt((x * x + y * y + z * z));
+       float delta = currentAcceleration - lastAcceleration;
+       acceleration = acceleration * 0.9f + delta;
+       if (acceleration > 12) {
+            getRandomFinding();
+       }
+     }
+...  .passwordEncoder(bCryptPasswordEncoder);
+}
+	\end{lstlisting}
+\end{samepage}
+
+In diesem Kapitel wurde die verschiedenen neuen Aspekte und Funktionen beschrieben und die dazugehörige Implementierungen. Im folgenden Kapital \textit{Evaluierung} wird die Implementierung interpretiert und die Ergebnisse werden ausgearbeitet.
 
 \chapterend
