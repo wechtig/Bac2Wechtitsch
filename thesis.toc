@@ -105,7 +105,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.3.3}Security Konfigurationen}{21}{subsubsection.4.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3.4}Controller und Oberfläche}{22}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}Controller und Oberfläche}{21}{subsubsection.4.2.3.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.4}Projektkonfiguration für Teammitglieder}{22}{subsection.4.2.4}%
 \defcounter {refsection}{0}\relax 
@@ -113,68 +113,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.1}Allgemeines}{23}{subsection.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1.1}Ablauf}{24}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Ablauf}{23}{subsubsection.4.3.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.3.1.2}Alternative Implementierungsmöglichkeiten}{24}{subsubsection.4.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}GithubAPI und Service}{25}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}GithubAPI und Service}{24}{subsection.4.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2.1}HttpClient und API-Abfrage}{25}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}HttpClient und API-Abfrage}{24}{subsubsection.4.3.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.3.2.2}Verarbeitung des Response}{25}{subsubsection.4.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Fehlende Informationen über die geänderten Zeilen}{28}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Fehlende Informationen über die geänderten Zeilen}{26}{subsection.4.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Oberfläche}{28}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}Oberfläche}{27}{subsection.4.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Cron Job und Report Sender für Berichte}{29}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Cron Job und Report Sender für Berichte}{27}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Automatische Berichte}{29}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Automatische Berichte}{27}{subsection.4.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Manuelle Berichte}{29}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Manuelle Berichte}{28}{subsection.4.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Versenden der Reports mit Java Mail}{30}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.3}Versenden der Reports mit Java Mail}{28}{subsection.4.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3.1}Implementierung und Konfiguration}{30}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}Implementierung und Konfiguration}{29}{subsubsection.4.4.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Kommentare}{31}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Kommentare}{29}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}Allgemeines und Vergleich zu Pull Requests}{31}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}Allgemeines und Vergleich zu Pull Requests}{29}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}Implementierung}{32}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Implementierung}{30}{subsection.4.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Android Applikation}{32}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Android Applikation}{31}{section.4.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Allgemeines und Idee}{32}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.1}Allgemeines und Idee}{31}{subsection.4.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.1.1}Neuer Funktion zur Steigerung der Kenntnisse}{33}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}Einsatz der Gamification}{32}{subsubsection.4.6.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Abfrage der Daten}{34}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.2}Abfrage der Daten}{32}{subsection.4.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Aktivitäten und Navigation}{34}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.3}Aktivitäten und Navigation}{33}{subsection.4.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.3.1}SplashActivity}{34}{subsubsection.4.6.3.1}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}SplashActivity}{33}{subsubsection.4.6.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.3.2}ProjectActivity}{36}{subsubsection.4.6.3.2}%
+\contentsline {subsubsection}{\numberline {4.6.3.2}ProjectActivity}{34}{subsubsection.4.6.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.3.3}MainActivity}{36}{subsubsection.4.6.3.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.3}MainActivity}{34}{subsubsection.4.6.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.6.3.4}ImageActivity}{37}{subsubsection.4.6.3.4}%
+\contentsline {subsubsection}{\numberline {4.6.3.4}ImageActivity}{35}{subsubsection.4.6.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Shake-Funktion}{38}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.4}Shake-Funktion}{36}{subsection.4.6.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{40}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{38}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Vergleiche der neuen Features mit anderen Lösungen}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Vergleiche der neuen Features mit anderen Lösungen}{38}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Evaluierung der Applikationen anhand von Testpersonen}{41}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Evaluierung der Applikationen anhand von Testpersonen}{39}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Testpersonen}{41}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Testpersonen}{39}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.1}Evaluierung durch das erste Team}{41}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Evaluierung durch das erste Team}{39}{subsubsection.5.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1.2}Team 2}{42}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Team 2}{40}{subsubsection.5.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{43}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{41}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{46}{chapter*.11}%
+\contentsline {chapter}{Literatur}{44}{chapter*.11}%
