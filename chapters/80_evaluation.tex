@@ -3,16 +3,16 @@
 \label{Evaluierung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
-\section{Vergleiche der neuen Features mit anderen Lösungen}
+\section{Vergleich der neuen Features mit anderen Lösungen}
 Dieser Vergleich setzt den Vergleich mit herkömmlichen Lösungen aus dem ersten Teil dieser Arbeit fort (Code Qualität und der Einsatz der Statischen Code Analyse für weitere Auswertungen und Präsentationen der Daten, Punkt 5.1):
 
 \begin{itemize} 
-\item Neue Benutzerinnen oder Benutzer können zum Projekt und damit zum Team hinzugefügt werden. Diese können von Administratoren hinzugefügt werden. Andere Lösungen wie integrierte Lösungen in Entwicklungsumgebungen oder Lösungen in der CI-Pipeline unterstützen diese Teamfunktionalität nicht. Hingegen unterstützen Produkte wie Veracode \footnote{https://help.veracode.com/reader/RXjxbTR2MDQdN3gX4l53CQ/RI1a2OsFNYfLuMX2t9BEOg} oder SonarQube\footnote{https://docs.sonarqube.org/latest/instance-administration/security/} dieses Funktionalität.
+\item Neue Benutzerinnen oder Benutzer können zum Projekt und damit zum Team hinzugefügt werden. Diese können von Administratoren hinzugefügt werden. Andere Lösungen wie integrierte Lösungen in Entwicklungsumgebungen oder Lösungen in der CI-Pipeline unterstützen diese Teamfunktionalität nicht. Hingegen unterstützen Produkte wie Veracode\footnote{https://help.veracode.com/reader/RXjxbTR2MDQdN3gX4l53CQ/RI1a2OsFNYfLuMX2t9BEOg} oder SonarQube\footnote{https://docs.sonarqube.org/latest/instance-administration/security/} dieses Funktionalität.
 \item Produkte wie SonarQube unterstützen auch eine genaue Rollenverwaltung für spezielle Funktionen in der Applikation. Diese ist in dieser Arbeit hingegen nicht implementiert.
 \item Durch die Github-Anbindung können für einzelne Benutzerinnen oder Benutzer die persönlichen Fehler angezeigt werden. Andere Lösungen unterstützen diese Funktionalität nicht. SonarQube und Veracode unterstützen aber eine Github-Anbindung, mit der beispielsweise die Pull Request und damit der neue Code gezielt untersucht werden können.
 \item Mit dem Report-Tool kann nun an das Team oder an andere Personen automatisch ein generierter Report mit den wichtigsten Informationen gesendet werden. Reports können auch von integrierten Tools für Entwicklungsumgebungen erstellt, aber nicht automatisch versendet werden.
 \item Mit der Kommentar-Funktion können Kommentare zu den einzelnen Meldungen erfasst und vom ganzen Team eingesehen werden. Diese Funktionalität wird auch von SonarQube, aber nicht von Veracode oder integrierten Lösungen unterstützt.
-\item Mit der mobilen Android-Lösungen können die wichtigsten Informationen einfach und schnell vom Team gesehen werden. Eine solche Möglichkeit wird von keiner anderen Lösung unterstützt.
+\item Mit der mobilen Android-Lösung können die wichtigsten Informationen einfach und schnell vom Team gesehen werden. Eine solche Möglichkeit wird von keiner anderen Lösung unterstützt.
 \end{itemize}
 
 \section{Evaluierung der Applikationen anhand von Testpersonen}
@@ -50,4 +50,41 @@ Testperson 1: 2, Bereitstellen eines Filters für Meldungen mit Kommentaren \\
 Testperson 2: 1, Anbinden eines Kanban-Boards für Verfolgen des Fortschritts der Fehlerausbesserung \\
 Testperson 3: 1 \\
 \subsubsection{Team 2}
+Das \textit{Team 2} bestand aus zwei Testpersonen. \\
+\textbf{Einfachheit} \\
+Testperson 1: 3, Mehr Information initial anzeigen, zum Beispiel in einem Dashboard  \\
+Testperson 2: 3, Andere Implementierung für Fehlerimport, zum Beispiel automatisch durch Repository-Angabe\\
+\textbf{Übersicht} \\
+Testperson 1: 2, Mehr Informationen auf der initialen  Startseite, zum Beispiel Quicklinks mit Erklärungen für die wichtigsten Funktionen\\
+Testperson 2: 1, Erstellen eines User-Dashboards. Dort können die Projekte des Users und Informationen wie häufigste Fehler angezeigt werden.\\
+\textbf{Unterstützung} \\
+Testperson 1: 2, Implementierung einer automatischen Lösungssuche mittels Schlüsselwörtern.  \\
+Testperson 2: 2, Hinzufügen einer Einstufung für die Wichtigkeit der Meldungen\\
+\textbf{Individualität} \\
+Testperson 1: 2, Cron-Zeiten in der Weboberfläche automatisch anpassen; Hinzufügen einer Möglichkeit zur Erstellung von Labels (Datenbank, Architektur, UI, ...), die Meldungen zugeordnet werden können.\\
+Testperson 2: 1 \\
+\textbf{Performance} \\
+Testperson 1: 2 \\
+Testperson 2: 1 \\
+\textbf{Verständlichkeit} \\
+Testperson 1: 1, Segmente statt den Footer in der Android-Applikation erstellen. Icons für die Navigation neben den Meldungen. \\
+Testperson 2: 1, Erstellen einer Dokumentation \\
+\textbf{Unterstützung für das Team} \\
+Testperson 1: 2, Implementierung der Möglichkeit zum Zuweisen von einzelnen Meldungen zu Benutzerinnen oder Benutzern\\
+Testperson 2: 2, Hinzufügen einer besseren Interaktion durch Nachrichten, die an die Teammitglieder geschickt werden können; 
+\subsection{Interpretation der Evaluierungen}
+\textbf{Einfachheit}: Durchschnittliche Wert: 2,4\\
+Viele Testpersonen merkten die fehlende initiale Anzeige an. Mit einer initialen Standardanzeige könnten ohne Abfrage die wichtigsten neuesten Meldungen und Informationen angezeigt werden. Dies gilt sowohl für die Webapplikation, als auch für die mobile Applikation. Eine zusätzliche Dokumentation soll zusätzlich zum Verständnis und zur Einfachheit beitragen.\\
+\textbf{Übersicht}: Durchschnittliche Wert: 1,6\\
+Mir der Erstellung eines Dashboards und weiteren Unterseiten kann die Übersicht gesteigert werden. Zusätzlich sollen die Charts auch für die einzelnen Benutzerinnen und Benutzer angepasst werden.\\
+\textbf{Unterstützung}: Durchschnittliche Wert: 1,6\\
+Mit einer automatischen Lösungssuche kann die Unterstützung noch besser erfolgen. Sie könnte mit Schlüsselwerten entwickelt werden. Ebenso sollen die Meldungen nach Wichtigkeit gereiht werden können, um dringende Fehler schneller sehen zu können. \\
+\textbf{Individualität}: Durchschnittliche Wert: 1,8\\
+Der hohe Wert des Kriteriums der Individualität zeigt die Möglichkeit auf, das Projekt in unterschiedlichen Projekten einsetzen zu können. Mehr Möglichkeiten zur Konfiguration, wie die Einstellung der Cron-Job Zeiten oder die Anbindungen weiterer VCS-Tools könnte die Individualität der Applikation weiter steigern. \\
+\textbf{Performance}: Durchschnittliche Wert: 1,2\\
+Bei der Performance gab es mit dem Testsetup keine Problem. Nur bei der Webapplikation gab es leichte Verzögerungen wegen der Requests. \\
+\textbf{Verständlichkeit}: Durchschnittliche Wert: 1,4\\
+Die Funktionen sollen besser erklärt werden, um die Verständlichkeit zu erhöhen. Ebenso sollen weitere UI-Elemente in der Android-Applikation hinzugefügt werden.\\
+\textbf{Unterstützung für Teams}: Durchschnittliche Wert: 1,6\\
+Der Wert der Unterstützung für Teams zeigt, die Möglichkeit zur Anwendung der Unterstützung für das Team. Aber auch hier können weitere Möglichkeiten zur Interaktion implementiert werden, wie die Zuweisung von Meldungen zu Usern oder die Anbindung eines eigenen Kanban-Boards für die Meldungen. \\
 \chapterend

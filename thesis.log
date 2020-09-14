@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  13 SEP 2020 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.14)  14 SEP 2020 14:06
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1240,22 +1240,13 @@ l.83 \end{titlepage}
 ])
 \openout2 = `chapters/03_abstract.aux'.
 
- (chapters/03_abstract.texpdfTeX warning (ext4): destination with the same iden
-tifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.23 \end{abstract}
-                    [1
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+ (chapters/03_abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+Underfull \hbox (badness 10000) in paragraph at lines 18--27
 
  []
 
@@ -1263,7 +1254,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 \end{abstract}
+l.29 \end{abstract}
+                    [1
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 \end{abstract}
                     [1]) (thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  14.
@@ -1582,7 +1592,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--52
 
  []
 
-[39] [40])
+[39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 76--90
+
+ []
+
+[41] [42])
 \openout2 = `chapters/90_conclusion.aux'.
 
  (chapters/90_conclusion.tex
@@ -1597,7 +1612,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[41
+[43
 
 
 
@@ -1614,7 +1629,7 @@ Overfull \hbox (9.58174pt too wide) in paragraph at lines 113--113
 n-taina-bi-li-ty. In: [on-li-ne] [][]$\T1/pcr/m/n/12 http :
  []
 
-[42
+[44
 
 
 
@@ -1631,13 +1646,13 @@ Overfull \hbox (46.58197pt too wide) in paragraph at lines 113--113
 maintainability/$[][]
  []
 
-[43]
+[45]
 Overfull \hbox (41.38197pt too wide) in paragraph at lines 113--113
 \T1/pcr/m/n/12 / / medium . com / the -[] liberators / teams -[] and -[] a -[] 
 shared -[] understanding -[]
  []
 
-[44]
+[46]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (thesis.aux (chapters/01_titlepage.aux) (chapters/02_declaration.aux)
@@ -1648,7 +1663,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B7CCEC9CD7526B38FFC15F070BAFCCC1;1909.
+(rerunfilecheck)             Checksum: 6F4285D28B11B9B176EC93AA1CBEF534;1908.
 
 
 LaTeX Warning: There were undefined references.
@@ -1666,9 +1681,9 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30433 strings out of 480900
- 546588 string characters out of 2917036
- 1383855 words of memory out of 3000000
+ 30436 strings out of 480900
+ 546618 string characters out of 2917036
+ 1383859 words of memory out of 3000000
  45349 multiletter control sequences out of 15000+200000
  598884 words of font info for 114 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1709,9 +1724,9 @@ courier/ucrro8a.pfb><D:/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/MikTex/f
 onts/type1/urw/times/utmb8a.pfb><D:/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:
 /MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/MikTex/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (51 pages, 509391 bytes).
+Output written on thesis.pdf (53 pages, 514339 bytes).
 PDF statistics:
- 822 PDF objects out of 1000 (max. 8388607)
- 307 named destinations out of 1000 (max. 500000)
+ 831 PDF objects out of 1000 (max. 8388607)
+ 310 named destinations out of 1000 (max. 500000)
  268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
